@@ -714,9 +714,7 @@ h6,
 		padding-right: 20px;
 	}
 
-	.carousel-item{
-		margin-left: 12%;
-	}
+	
 
 	.carousel-item img{
 		height: 550px;
@@ -1171,6 +1169,7 @@ a.btn-scroll:hover,
 footer .social-media li:hover a,
 .widget.events a:hover,
 .tag ul li a {
+	text-align: left;
 	color: var(--secondery-theme-color) !important;
 }
 
@@ -1988,7 +1987,7 @@ a.btn-scroll b {
 
 .journey-step {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align items at the top */
     gap: 15px;
     margin-bottom: 50px;
     position: relative;
@@ -2007,6 +2006,7 @@ a.btn-scroll b {
     border-radius: 50%;
     position: relative;
     z-index: 2;
+    flex-shrink: 0; /* Prevents resizing */
 }
 
 /* Connecting lines between numbers */
@@ -2027,6 +2027,11 @@ a.btn-scroll b {
     display: none;
 }
 
+.step-content {
+    text-align: left; /* Ensure all text stays left-aligned */
+    flex: 1;
+}
+
 .step-content h3 {
     font-size: 24px;
     margin: 0;
@@ -2043,26 +2048,31 @@ a.btn-scroll b {
 @media (max-width: 992px) {
     .journey-container {
         flex-direction: column;
-        text-align: center;
+        text-align: left; /* Left align all content */
         gap: 50px;
     }
 
-    .journey-image img {
-        max-width: 80%;
-    }
-
     .journey-steps {
-        text-align: center;
+        text-align: left;
+        width: 100%;
     }
 
     .journey-step {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: row; /* Keep number & text in a row */
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .step-number {
+        flex-shrink: 0;
     }
 
     .step-number::after {
         display: none;
+    }
+
+    .step-content {
+        text-align: left;
     }
 
     .step-content h3 {
@@ -2074,6 +2084,281 @@ a.btn-scroll b {
     }
 }
 
+
+/* carousel */
+.carousel-section {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.carousel-container {
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+}
+
+.carousel-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0943a0;
+    margin-bottom: 20px;
+}
+
+.scroll-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    scrollbar-width: none;
+    padding: 10px 0;
+}
+
+.scroll-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.carousel-image {
+    width: 425px;
+    height: 450px;
+    border-radius: 12px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-image:hover {
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .carousel-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .carousel-heading {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .scroll-carousel {
+        padding: 5px 0;
+        justify-content: center;
+    }
+
+    .carousel-track {
+        gap: 5px;
+        padding-bottom: 5px;
+    }
+
+    .carousel-image {
+        width: 90vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel-heading {
+        font-size: 20px;
+    }
+
+    .carousel-image {
+        width: 85vw;
+        height: 300px;
+    }
+}
+
+
+/* carousel section end */
+
+
+/* how it works */
+
+/* Container */
+.ultra-container {
+    text-align: center;
+    padding: 50px 20px;
+    width: 100%;
+}
+
+/* Heading */
+.epic-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #0a2746;
+    margin-bottom: 50px;
+}
+
+/* Wrapper */
+.flow-wrapper {
+    display: flex;
+    justify-content: space-evenly; /* More spacing between cards */
+    max-width: 1200px; /* Increased container width */
+    margin: 0 auto;
+    gap: 60px; /* Increased gap between cards */
+    flex-wrap: wrap; /* Prevents cards from squishing on smaller screens */
+}
+
+/* Box */
+.magic-box {
+    flex: 1;
+    min-width: 280px; /* Ensures boxes don't shrink too much */
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 6px 6px 0 -2px #000;
+    text-align: left;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.magic-box:hover{
+	background: var(--primary-theme-color);
+	color: #000;
+}
+
+/* Number */
+.power-digit {
+    font-size: 40px;
+    font-weight: bold;
+    color: #072d7a;
+    margin: 0;
+}
+
+/* Title */
+.legend-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #0a2746;
+}
+
+/* Description */
+.wizard-words {
+    font-size: 15px;
+    color: #444;
+    margin-top: 12px;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    background: var(--primary-theme-color);
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+	border: 1px solid black;
+}
+
+.whatsapp-btn:hover {
+    background: var(--overlay-white-color);
+	color: black;
+	border: 1px solid black;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .flow-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; /* More spacing for mobile */
+    }
+
+    .magic-box {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+/* faqs */
+
+/* FAQ Section Styling */
+#faq_zone_742 {
+    padding: 70px 20px;
+	width: 100%;
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
+
+.faq_wrapper_mega_999 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.faq_text_box_ultimate_888 {
+    max-width: 60%;
+}
+
+.faq_subheading_super_121 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.faq_main_heading_xtreme_777 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* View All FAQs Link */
+.faq_action_link_godmode_555 {
+    text-align: right;
+}
+
+#faq_hyperlink_epic_333 {
+    text-decoration: none;
+    font-size: 16px;
+    color: #b49d28;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.faq_arrow_magic_222 {
+    margin-left: 5px;
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#faq_hyperlink_epic_333:hover .faq_arrow_magic_222 {
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq_wrapper_mega_999 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .faq_text_box_ultimate_888 {
+        max-width: 100%;
+    }
+
+    .faq_action_link_godmode_555 {
+        margin-top: 10px;
+    }
+}
 
 /* why choose us  */
 
@@ -2129,8 +2414,9 @@ a.btn-scroll b {
 
 /* Feature Box */
 .unique-feature-item {
-    padding: 25px;
+    padding: 10px;
     transition: transform 0.3s ease;
+	text-align: left;
 }
 
 .unique-feature-item:hover {
@@ -2480,7 +2766,7 @@ section {
 
 /*===== Form CSS =====*/
 .form-style-1 .form-control {
-	border-radius: 0;
+	border-radius: 1.2em;
 	border: none
 }
 
@@ -3810,7 +4096,7 @@ hero section
 }
 
 .hero-section__subheading {
-	font-size: 1.5rem;
+	font-size: 2.5rem;
 	font-weight: normal;
 	color: white;
 	margin-bottom: 20px;
@@ -3827,7 +4113,7 @@ hero section
 .hero-section__image-container img.hero-section__image {
 	width: 100%;
 	max-height: 460px;
-	margin-bottom: 0px;
+	margin-bottom: -80px;
 
 }
 
@@ -3850,13 +4136,19 @@ hero section
 
 @media (max-width: 480px) {
 	.hero-section__heading {
-		font-size: 2rem;
+		font-size: 2.6rem;
+		text-align: left;
+		font-weight: 900;
 	}
 	.hero-section__subheading {
 		font-size: 1.2rem;
+		text-align: left;
+		margin-top: 15px;
+
 	}
 	.hero-section__image-container {
 		max-width: 100%;
+		display: none;
 	}
 }
 
@@ -3869,7 +4161,7 @@ hero section
     text-align: left;
     margin-bottom: 20px;
     width: 340px;
-	height: 400px;
+	height: 350px;
     border-width: 4px;
     border-style: solid;
     border-color: rgb(245, 244, 228);
@@ -3898,9 +4190,9 @@ hero section
 }
 
 .service-item-2 p {
-	margin-bottom: 0
+    margin-bottom: 0;
+    text-align: left;
 }
-
 .service-item-2 [class^="flaticon-"]::before {
 	font-size: 40px;
 	position: absolute;
@@ -4514,12 +4806,112 @@ ol {
 ====================================================================*/
 
 .contact-form-3 .btn {
-	border-radius: 0;
-	float: left
+    border-radius: 1em;
+    float: left;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
 }
 
+/* video section */
+#video_zone_mega_742 {
+    padding: 40px 20px 0;
+    background-color: white;
+	width: 100%;
+}
 
+.video_container_pro_111 {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
 
+.video_title_box_extreme_333 {
+    margin-bottom: 30px;
+}
+
+.video_main_heading_glow_777 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Swiping Slider */
+.video_slider_wrapper_swipe_555 {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video_slider_track_magic_888 {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none; /* Hide scrollbar for IE */
+}
+
+.video_slider_track_magic_888::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+/* Video Cards */
+.video_slide_card_epic_222 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Video Styling */
+.video_frame_box_legend_444,
+.video_file_box_infinity_666 {
+    width: 100%;
+    height: 475px;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Navigation Buttons */
+.video_slider_button_left_hero_101,
+.video_slider_button_right_hero_202 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px 15px;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.video_slider_button_left_hero_101:hover,
+.video_slider_button_right_hero_202:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Button Positions */
+.video_slider_button_left_hero_101 {
+    left: 10px;
+}
+
+.video_slider_button_right_hero_202 {
+    right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .video_main_heading_glow_777 {
+        font-size: 22px;
+    }
+
+    .video_frame_box_legend_444,
+    .video_file_box_infinity_666 {
+        height: 300px;
+    }
+}
 
 /*====================================================================
 	Why Choose Us css Page 4
