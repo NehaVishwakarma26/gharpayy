@@ -77,6 +77,8 @@ h6,
 	align-items: center;
 	padding: 40px 0px 40px 0px;
 	overflow: hidden;
+	color: white;
+	text-align: center;
 }
 
 .photo-track {
@@ -352,21 +354,153 @@ h6,
 }
 
 .listing-images-wrapper {
+	margin-top: 
+	2em;
 	position: relative;
 	/* background-color: #e1f6f2; */
-	background-color: black;
+	/* background-color: black; */
 	display: flex;
 	align-items: center;
 	padding: 20px 0 40px 30px;
 	overflow: hidden;
 }
 
+/* new hero section */
+/* Hero Section Wrapper */
+#stellar_hero_wrapper {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+}
+
+/* Hero Content Container */
+.cosmic_hero_container {
+    display: flex
+;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 89px;
+	padding: 8em;
+}
+/* Left Side Text Box */
+.nebula_text_box {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Icon Styling */
+.galactic_icon img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* Heading */
+.stellar_heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+/* Description */
+.orbit_description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* CTA Button */
+.warp_cta_button {
+	max-width: 300px;
+    background: #0943A0;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.warp_cta_button:hover {
+    background: #052457;
+}
+
+/* Make hero section responsive */
+@media (max-width: 1024px) {
+    .cosmic_hero_container {
+        flex-direction: column;
+        text-align: center;
+        width: 1000%;
+        padding: 2rem;
+    }
+
+    .nebula_text_box {
+        padding: 2rem;
+    }
+
+    .stellar_heading {
+        font-size: 1.8rem;
+    }
+
+    .orbit_description {
+        font-size: 0.95rem;
+    }
+
+    .warp_cta_button {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    .nebula_image img {
+        width: 100%;
+        height: auto;
+		display: none;
+    }
+}
+
+/* Adjustments for phones */
+@media (max-width: 768px) {
+	.cosmic_hero_container {
+        width: 100%;
+        margin-top: 0px;
+		padding: 0px;
+    }
+    .stellar_heading {
+        font-size: 1.6rem;
+		text-align: left;
+    }
+
+    .orbit_description {
+        font-size: 0.9rem;
+		text-align: left;
+    }
+
+    .warp_cta_button {
+        font-size: 0.95rem;
+    }
+}
+
+
+
 .listing-images-wrapper h3{
-	color: var(--primary-theme-color)  !important;
+	color: #0943A0   !important;
 }
 
 .listing-images-wrapper h2{
-	color: var(--primary-theme-color)  !important;
+	color: #0943A0   !important;
 }
 .listing-images {
 	display: flex;
@@ -377,10 +511,10 @@ h6,
 }
 
 .listing-images h3 {
-	font-family: var(--theme-body-font);
-	font-weight: 900;
-	font-size: 1.35rem;
-	color: var(--primary-theme-color)  !important;
+    font-family: var(--theme-body-font);
+    font-weight: 900;
+    font-size: 1.35rem;
+    color: #0943A0 !important;
 }
 /* 
 .prop-type{
@@ -420,7 +554,7 @@ h6,
 
 .listing-images-wrapper p {
 	position: relative;
-	color: white !important;
+	color: black  !important;
 }
 
 .listing-images-wrapper p::before {
@@ -2094,12 +2228,12 @@ a.btn-scroll b {
 }
 
 .carousel-container {
-    margin: 0 auto;
+    /* margin: 0 auto;
     padding: 20px;
     background: white;
     border-radius: 12px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
+    max-width: 90%; */
 }
 
 .carousel-heading {
@@ -2111,13 +2245,14 @@ a.btn-scroll b {
 
 .scroll-carousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    border-radius: 12px;
-    scrollbar-width: none;
-    padding: 10px 0;
+    white-space: nowrap;
+    width: 100%;
+    scroll-behavior: smooth; /* Ensures smooth scrolling */
 }
+
 
 .scroll-carousel::-webkit-scrollbar {
     display: none;
@@ -2125,8 +2260,9 @@ a.btn-scroll b {
 
 .carousel-track {
     display: flex;
+    flex-wrap: nowrap;
     gap: 15px;
-    padding-bottom: 10px;
+    width: max-content; /* Ensures all images fit inside */
 }
 
 .carousel-image {
@@ -2141,6 +2277,26 @@ a.btn-scroll b {
     transform: scale(1.05);
 }
 
+/* Dots Styling */
+/* .carousel-dots {
+    text-align: center;
+    margin-top: 15px;
+    display: none; 
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dot.active {
+    background-color: #0943a0;
+    transform: scale(1.2);
+} */
 
 /* Responsive Design for Mobile Screens */
 @media screen and (max-width: 768px) {
@@ -2160,14 +2316,35 @@ a.btn-scroll b {
     }
 
     .carousel-track {
-        gap: 5px;
+        gap: 0px;
         padding-bottom: 5px;
     }
 
     .carousel-image {
-        width: 90vw;
-        height: auto;
+        flex-shrink: 0;
+    width: 300px;
+    margin-right: 15px;
+    border-radius: 8px;
+    overflow: hidden;
     }
+
+    /* .dot {
+        height: 10px;
+        width: 10px;
+        margin: 4px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease-in-out;
+    }
+	.carousel-dots {
+        display: block;
+    }
+.dot.active{
+	background-color: #0943a0;
+        transform: scale(1.2);
+} */
+
 }
 
 @media screen and (max-width: 480px) {
@@ -2179,8 +2356,12 @@ a.btn-scroll b {
         width: 85vw;
         height: 300px;
     }
-}
 
+    .dot {
+        height: 8px;
+        width: 8px;
+    }
+}
 
 /* carousel section end */
 
@@ -2478,8 +2659,7 @@ a.btn-scroll b {
     padding-bottom: 80px;
     padding-top: 80px;
     border-radius: 20px;
-    /* background-color: #8080802e !important; */
-}
+    background-color: #F4C024 !important;}
 
 
 /*============================================
@@ -4075,14 +4255,11 @@ hero section
 */
 
 .hero-section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	height: auto;
 	width: 100%;
-	box-sizing: border-box;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-section__heading {
@@ -4181,11 +4358,11 @@ hero section
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
-    .service-item-2 {
-        width: 100%; /* Full width for mobile screens */
-        height: auto; /* Height adjusts to content */
-        padding: 10px; /* Reduced padding for mobile */
-        border-radius: 20px 10px 10px; /* Smaller border radius for mobile */
+	.service-item-2 {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        border-radius: 20px 10px 10px;
     }
 }
 
@@ -4824,29 +5001,44 @@ ol {
     max-width: 1200px;
     margin: auto;
     text-align: center;
+	margin-bottom: 40px;
 }
 
 .video_title_box_extreme_333 {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
     margin-bottom: 30px;
 }
 
 .video_main_heading_glow_777 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #222; /* Dark gray for a clean look */
+    margin-bottom: 8px;
 }
 
+.video_title_box_extreme_333 h3 {
+    font-size: 1.5rem;
+    color: #555; /* Softer gray for subtle contrast */
+    font-weight: 400;
+    margin-top: 5px;
+    opacity: 0.9;
+}
 /* Swiping Slider */
 .video_slider_wrapper_swipe_555 {
-    position: relative;
-    overflow: hidden;
-    max-width: 100%;
+    overflow-x: auto;
+	white-space: nowrap;
+	display: flex;
 }
 
 .video_slider_track_magic_888 {
+	border-radius: 2em;
+	padding: 20px;
+	min-width: 100%;
     display: flex;
     gap: 20px;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar for IE */
@@ -4859,7 +5051,10 @@ ol {
 /* Video Cards */
 .video_slide_card_epic_222 {
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.30);
+    border-radius: 20px;
+    margin: 10px;
 }
 
 /* Video Styling */

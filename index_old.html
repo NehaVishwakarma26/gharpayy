@@ -245,13 +245,37 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <!-- <div class="full-row p-0">
             <div id="slider" class="overflow_hidden" style="width:1200px;height:100vh;margin:0 auto;margin-bottom: 0px;">  -->
 
-                <section class="hero-section" style="background-color: #f4c024 !important;">
+                <!-- <section class="hero-section" style="background-color: pink !important;">
                     <h1 class="hero-section__heading">HOTEL WALA PG COLIVING</h1>
                     <h2 class="hero-section__subheading">GHARTYPE Comfortable Accommodation</h2>
                     <div class="hero-section__image-container">
                         <img src="img\newcover-removebg-preview.png" alt="Illustration" class="hero-section__image">
                     </div>
+                </section> -->
+
+                <section  class="hero-section" style="background-color:#F4C024 !important;">
+                    <div class="cosmic_hero_container">
+                        <div class="nebula_text_box">
+                            
+                            <h1 class="stellar_heading">
+                                GHARTYPE Comfortable Accommodation
+                            </h1>
+                            <p class="orbit_description">
+                                Find beautiful spaces with exceptional service and convenient amenities. Choose between shared or private living in Bangalore. Bring your luggage; we’ll take care of the rest.
+                            </p>
+                            <button class="warp_cta_button" onclick="scrollToCarousel()">Check Us Out</button>
+                        </div>
+                        <div class="nebula_image">
+                            <img src="img\newcover-removebg-preview.png" alt="Luxury Room">
+                        </div>
+                    </div>
                 </section>
+
+                <script>
+                    function scrollToCarousel() {
+                        document.querySelector('.carousel-section').scrollIntoView({ behavior: 'smooth' });
+                    }
+                </script>
 
                 <!-- <section class="full-row bg-primary" style="background-image: url('your-image.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px 0;background-color: #f4c024 !important;">
                     <div class="container">
@@ -1234,9 +1258,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <section id="video_zone_mega_742" class="video_section_wrap_ultimate_999">
                 <div class="video_container_pro_111">
                     <div class="video_title_box_extreme_333">
-                        <h2 class="video_main_heading_glow_777">
+                        <h2 class="main-title-area text-center title ">
                             A picture is worth a thousand words, but a video is priceless.
                         </h2>
+                        <h3>Scroll to see the magic happen.</h3>
                     </div>
         
                     <div class="video_slider_wrapper_swipe_555">
@@ -1261,8 +1286,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
         
                         <!-- Navigation Buttons -->
-                        <button class="video_slider_button_left_hero_101" onclick="scrollLeft()">❮</button>
-                        <button class="video_slider_button_right_hero_202" onclick="scrollRight()">❯</button>
+                       
                     </div>
         
                 </div>
@@ -1270,11 +1294,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         
             <script>
                 function scrollLeft() {
-                    document.querySelector('.video_slider_track_magic_888').scrollBy({ left: -600, behavior: 'smooth' });
+                    document.querySelector('.video_slider_track_magic_888').scrollBy({ left: -900, behavior: 'smooth' });
                 }
         
                 function scrollRight() {
-                    document.querySelector('.video_slider_track_magic_888').scrollBy({ left: 600, behavior: 'smooth' });
+                    document.querySelector('.video_slider_track_magic_888').scrollBy({ left: 900, behavior: 'smooth' });
                 }
             </script>
 
@@ -1307,7 +1331,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 <!-- video section end -->
 
             <!-- Faq Section Start -->
-            <section class="full-row bg-white pt-0" style="padding-bottom: 5px;">
+            <!-- <section class="full-row bg-white pt-0" style="padding-bottom: 5px;">
                 <div class="container" style="padding: 0;">
                     <div class="quextion-box bg-secondery p-5">
                         <div class="row">
@@ -1323,7 +1347,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Footer Section Start -->
 
             <!-- Property Search Section Start -->
@@ -1580,7 +1604,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
       
-        <section class="photo-track-container row" style="background-color: black;">
+        <section class="photo-track-container row" >
+            <h2 class="main-title-area text-center title" style="color: white !important; text-align:center !important;margin:auto;
+            padding-bottom:20px;">Tenant Reviews</h2>
+
             <button class="scroll-button left" onclick="scrollTrack('left')">&lt;</button>
             <div class="photo-track">
                 <img src="img/reviews/review3.jpg" alt="">
@@ -1618,42 +1645,47 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <img src="img/sliderimages/slider11.jpg" class="carousel-image">
                     </div>
                 </div>
+                <!-- <div class="carousel-dots"></div> -->
             </div>
         </section>
         
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const carousel = document.querySelector(".scroll-carousel");
-        
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-        
-            carousel.addEventListener("mousedown", (e) => {
-                isDown = true;
-                startX = e.pageX - carousel.offsetLeft;
-                scrollLeft = carousel.scrollLeft;
+        <!-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const carousel = document.querySelector(".scroll-carousel");
+                let isDown = false;
+                let startX, scrollLeft;
+            
+                // Force the carousel to start at the first image
+                setTimeout(() => {
+                    carousel.scrollLeft = 0;
+                }, 100); // Small delay to override any previous scroll positions
+            
+                carousel.addEventListener("mousedown", (e) => {
+                    isDown = true;
+                    startX = e.pageX - carousel.offsetLeft;
+                    scrollLeft = carousel.scrollLeft;
+                });
+            
+                carousel.addEventListener("mouseleave", () => {
+                    isDown = false;
+                });
+            
+                carousel.addEventListener("mouseup", () => {
+                    isDown = false;
+                });
+            
+                carousel.addEventListener("mousemove", (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - carousel.offsetLeft;
+                    const walk = (x - startX) * 1.5; // Adjust speed
+                    carousel.scrollLeft = scrollLeft - walk;
+                });
             });
-        
-            carousel.addEventListener("mouseleave", () => {
-                isDown = false;
-            });
-        
-            carousel.addEventListener("mouseup", () => {
-                isDown = false;
-            });
-        
-            carousel.addEventListener("mousemove", (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - carousel.offsetLeft;
-                const walk = (x - startX) * 2; // Adjust scroll speed
-                carousel.scrollLeft = scrollLeft - walk;
-            });
-        });
-        
-      </script>
-        
+            
+            
+            </script>
+         -->
         <!-- <div class="carousel-track" style="background-color: black;">
             <div class="testimonial">
                 <img src="profile1.jpg" alt="User 1">
@@ -2197,7 +2229,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="faq_wrapper_mega_999">
                 <div class="faq_text_box_ultimate_888">
                     <p class="faq_subheading_super_121">Eager to learn more about GharPayy</p>
-                    <h2 class="faq_main_heading_xtreme_777">FAQs</h2>
                 </div>
                 <div class="faq_action_link_godmode_555">
                     <a href="#" id="faq_hyperlink_epic_333">View all FAQs <span class="faq_arrow_magic_222">→</span></a>
