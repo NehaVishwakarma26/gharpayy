@@ -83,10 +83,6 @@
     <style>
 
     </style>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-
-
 </head>
 <!-- Event snippet for Contact conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
@@ -106,10 +102,6 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         return false;
     }
 </script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
 
 <body>
 
@@ -261,292 +253,29 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
                 </section> -->
 
-                <section class="hero-section" style="background-color:#F4C024 !important;">
+                <section  class="hero-section" style="background-color:#F4C024 !important;">
                     <div class="cosmic_hero_container">
                         <div class="nebula_text_box">
+                            
                             <h1 class="stellar_heading">
-                                Explore Premium Living Spaces
+                                GHARTYPE Comfortable Accommodation
                             </h1>
                             <p class="orbit_description">
-                                Discover modern, fully-furnished accommodations in Bangalore. Whether you prefer a private retreat or a shared space, we offer stylish homes with top-tier amenities. Just move in, and we’ll handle the rest.
+                                Find beautiful spaces with exceptional service and convenient amenities. Choose between shared or private living in Bangalore. Bring your luggage; we’ll take care of the rest.
                             </p>
-                            <button class="warp_cta_button" onclick="scrollToCarousel()">View Listings</button>
+                            <button class="warp_cta_button" onclick="scrollToCarousel()">Check Us Out</button>
                         </div>
                         <div class="nebula_image">
-                            <img src="img/newcover-removebg-preview.png" alt="Premium Living">
+                            <img src="img\newcover-removebg-preview.png" alt="Luxury Room">
                         </div>
                     </div>
                 </section>
-                
+
                 <script>
                     function scrollToCarousel() {
-                        document.querySelector('.similar-listings').scrollIntoView({ behavior: 'smooth' });
+                        document.querySelector('.carousel-section').scrollIntoView({ behavior: 'smooth' });
                     }
                 </script>
-
-                
-<style>
-
-
-    /* Container Grid */
-    .listings-container {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(280px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        justify-items: center;
-    }
-  
-    /* Card Styling */
-    .listing-card {
-        background: #fff;
-        border-radius:1em;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        width: 100%;
-        max-width: 320px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        margin-bottom: 3em;
-    }
-  
-    .listing-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-  
-    /* Image Styling */
-    .listing-card img {
-        width: 100%;
-        height: 260px;
-        object-fit: cover;
-    }
-  
-    /* Info Styling */
-    .listing-info {
-        text-align: left;
-    }
-  
-    .listing-info h3 {
-    /* color: black; */
-    font-size: 1.3rem;
-    /* margin-bottom: 5px; */
-    padding: 0.6rem;
-    font-family: 'Montserrat';
-    color: white !important;
-    background-color: #c10b1a;
-}
-    .listing-info p {
-      color: rgb(56, 56, 56);
-      font-size: 0.95rem;
-      margin-bottom: 10px;
-      /* padding-top: 1rem; */
-      margin-left: 1rem;
-      margin-right: 1rem;
-  }
-  .badge {
-    background: #FFC48C;
-    color: #8B5E34;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 2;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-container img {
-    width: 100%;
-    display: block;
-}
-
-.category-label {
-    position: absolute;
-    bottom: 0px;
-    /* left: 10px; */
-    background: #ff5f5f;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 0px 10px 0px 0px;
-    font-size: 12px;
-    font-weight: bold;
-    z-index: 2;
-}
-.location, .commute, .lease-start {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
-    margin-left: 1em;
-    /* left: 1rem; */
-}
-
-.price {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: red;
-    margin-left: 1em;
-    padding-bottom: 1em;
-}
-.original-price {
-    font-size: 14px;
-    color: grey;
-}
-
-/* Customizing Swiper Navigation Arrows */
-.swiper-button-next, .swiper-button-prev {
-    color: white; /* Arrow color */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hover Effect */
-.swiper-button-next:hover, .swiper-button-prev:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-/* Position Fix */
-.swiper-button-prev {
-    left: 5px;
-}
-.swiper-button-next {
-    right: 5px;
-}
-
-/* Resize Arrow Icons */
-.swiper-button-next::after, .swiper-button-prev::after {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .listings-container {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-    }
-  </style>
-  
-  
-  <div class="container">
-     <div class="row justify-content-center">
-        <div class="col-12 col-lg-7">
-           <div class="section-heading text-center">
-              <h2 class="mb-1 mt-4 gallery-title">All Listings</h2>
-           </div>
-        </div>
-     </div>
-  </div>
-  
-  
-  
-  
-  
-     <section class="similar-listings" style="width: 100% !important; padding: 20px 0px !important;">
-        <div class="listings-container">
-            <div class="listing-card" id="listing1">
-                <div class="badge">Only 1 unit left</div> <!-- Availability Badge -->
-            
-                <div class="image-container swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="img/similar-listings/solaria.png" alt="Property Image 1"></div>
-                        <div class="swiper-slide"><img src="img/similar-listings/solaria2.png" alt="Property Image 2"></div>
-                        <div class="swiper-slide"><img src="img/similar-listings/solaria3.png" alt="Property Image 3"></div>
-                    </div>
-                    <!-- Sleek Navigation Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <!-- Pagination Dots -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            
-                <div class="listing-info">
-                    <h3>Solaria Coed</h3>
-                    <p>Premium room with external window</p>
-                    <div class="location">
-                        <i class="fas fa-map-marker-alt"></i> Whitefield
-                    </div>
-                    <div class="commute">
-                        <i class="fas fa-subway"></i> <span>25 mins to metro</span>
-                    </div>
-                    <div class="lease-start">
-                        <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
-                    </div>
-                    <div class="price">
-                        <span class="discounted-price">IDR 30,000 / month</span>
-                        <span class="original-price">IDR <s>45,000</s> / month</span>
-                    </div>
-                </div>
-            </div>
-            
-            <script>
-                var swiper = new Swiper(".swiper", {
-                    loop: true,
-                    autoplay: { delay: 3000 },
-                    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-                    pagination: { el: ".swiper-pagination", clickable: true }
-                });
-            </script>
-            
-            
-
-            <div class="listing-card" id="listing2">
-                <img src="img/similar-listings/snowy.png" alt="Property 2">
-                <div class="listing-info">
-                    <h3>Snowy Luxe</h3>
-                    <p>Whitefield</p>
-                    <span class="status">Available</span>
-                </div>
-            </div>
-            <div class="listing-card" id="listing3">
-                <img src="img/similar-listings/spot.png" alt="Property 3">
-                <div class="listing-info">
-                    <h3>Spot Coed</h3>
-                    <p>Whitefield</p>
-                    <span class="status">Available</span>
-                </div>
-            </div>
-            <div class="listing-card" id="listing4">
-                <img src="img/similar-listings/velvet.png" alt="Property 4">
-                <div class="listing-info">
-                    <h3>Velvet Girls</h3>
-                    <p>MG Road</p>
-                    <span class="status">Available</span>
-                </div>
-            </div>
-            <div class="listing-card" id="listing5">
-                <img src="img/similar-listings/baxk.png" alt="Property 5">
-                <div class="listing-info">
-                    <h3>Baxk Boys</h3>
-                    <p>Koramangala</p>
-                    <span class="status">Available</span>
-                </div>
-            </div>
-            <div class="listing-card" id="listing6">
-                <img src="img/similar-listings/7ths.png" alt="Property 6">
-                <div class="listing-info">
-                    <h3>7ths Coed</h3>
-                    <p>HSR Layout</p>
-                    <span class="status">Available</span>
-                </div>
-            </div>
-        </div>
-    </section>
-  
-  
-  <hr>
 
                 <!-- <section class="full-row bg-primary" style="background-image: url('your-image.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 50px 0;background-color: #f4c024 !important;">
                     <div class="container">
@@ -664,9 +393,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             </section> -->
 
-            
-
-          
+        
             <!-- listings section start -->
 
             <!-- <section>
@@ -917,7 +644,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <!-- listings section end -->
 
 
-           
+          
 
 <!--           
 
@@ -940,56 +667,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </section> -->
 
             <!-- Why Choose Us Section Start -->
-            <section class="premium-features-section" style="background-color: #f4c024;">
-                <div class="exclusive-features-container">
-                    <div class="headline-area text-center">
-                        <h2 class="main-title left-right-border mb-4">Super Gharpayy</h2>
-                    </div>
-                    <div class="luxury-features-grid" style="color: black;">
-                        <div class="unique-feature-item" id="feature-room">
-                            <span class="material-icons">hotel</span>
-                            <h3>High Quality Rooms</h3>
-                            <p>Experience the finest rooms designed for comfort and luxury.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-comfort">
-                            <span class="material-icons">weekend</span>
-                            <h3>Comfort Like Home</h3>
-                            <p>Feel at home with cozy interiors and premium facilities.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-security">
-                            <span class="material-icons">security</span>
-                            <h3>High Class Security</h3>
-                            <p>Your safety is our priority with top-notch security systems.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-gym-gaming">
-                            <span class="material-icons">sports_esports</span>
-                            <h3>GYM N Gaming Zone</h3>
-                            <p>Stay fit and entertained with our gym and gaming area.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-lifestyle">
-                            <span class="material-icons">emoji_events</span>
-                            <h3>Unlock New Lifestyle</h3>
-                            <p>Enjoy a premium lifestyle with modern amenities.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-support">
-                            <span class="material-icons">support_agent</span>
-                            <h3>Always At Your Service</h3>
-                            <p>24/7 assistance to ensure your comfort and convenience.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-laundry">
-                            <span class="material-icons">local_laundry_service</span>
-                            <h3>Free Laundry With Iron</h3>
-                            <p>Complimentary laundry and ironing service for hassle-free living.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-workstations">
-                            <span class="material-icons">computer</span>
-                            <h3>Cool Workstations</h3>
-                            <p>Productive and stylish workspaces designed for professionals.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
+       
             <!-- Why Choose Us Section End -->
 
 
@@ -1079,112 +757,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
  -->
 
             <!-- Achievement Section Start -->
-          <section class="premium-stats-section">
-    <div class="card bg-light shadow-lg p-4">
-        <div class="text-center mb-4">
-            <h2 class="main-title">Why Choose Gharpayy?</h2>
-            <p class="text-muted">Providing the best living experience with premium services.</p>
-        </div>
-        <div class="full-row py-5 bg-primary text-center">
-            <div class="container">
-                <div class="fact-counter">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="count wow item m-auto d-table py-3" data-wow-duration="300ms">
-                                <div class="h2 text-black"><span class="count-num" data-speed="3000"
-                                        data-stop="400">0</span>+</div>
-                                <span class="h5 text-black fw-5">HOTEL ROOMS AS PG</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="count wow item m-auto d-table py-3" data-wow-duration="300ms">
-                                <div class="h2 text-black"><span class="count-num" data-speed="3000"
-                                        data-stop="2000">0</span>+</div>
-                                <span class="h5 text-black fw-5">HAPPY GHARPAYY GUESTS</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="count wow item m-auto d-table py-3" data-wow-duration="300ms">
-                                <div class="h2 text-black"><span class="count-num" data-speed="3000"
-                                        data-stop="10000">0</span>+</div>
-                                <span class="h5 text-black fw-5">GOOD FOOD SERVED</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="count wow item m-auto d-table py-3" data-wow-duration="300ms">
-                                <div class="h2 text-black"><span class="count-num" data-speed="3000"
-                                        data-stop="50000">0</span>+</div>
-                                <span class="h5 text-black fw-5">GHARWALI FEELINGS</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>  
-</section>
+     
 
             <!-- Achievement Section End -->
 
-            <section class="full-row bg-white" style="padding-bottom: 5px; padding-top: 30px;" id="amenities">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="main-title-area text-center">
-                                <h2 class="title left-right-line mb-5">Amenities</h2>
-                            </div>
-                        </div>
-                        <!-- <div class="col-lg-12">
-                            <img src="img/amenities.jpg">
-                        </div> -->
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-coffee" style="font-size: 34px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Power Breakfast</h5>
-                                <p>How many times do you skip having breakfast (the most important meal of the day!) Innumerable times, right! We know the banes of your life and have you covered with free breakfast every morning to charge your fuel.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-unlock-alt" style="font-size: 34px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">24*7 Security</h5>
-                                <p>If you can’t get a night of peaceful sleep without worrying about who would break in, can you really call that place your home? With CCTV cameras, biometric admissions, security personnel round the clock, and enabling them with the latest tech, we never take safety lightly.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-tshirt" style="font-size: 36px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Laundry</h5>
-                                <p>Early morning meetings, impromptu travels, date nights, or jamming with your gang—we want you to deck up the best without hassling over whether you missed washing your favorite shirt or dress. Self-service washing machines as well as dedicated laundry services—you can choose your pick.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-wifi" style="font-size: 34px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Wifi</h5>
-                                <p>Our thumb rule: only a battle-tested wifi deserves your time. With unlimited access to high-speed internet, we want your lightbulb moments to be as random as possible and create, develop, and have fun while you’re at it.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-concierge-bell" style="font-size: 36px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Concierge</h5>
-                                <p>Wouldn’t you love to have a trained hospitality professional take care of all your woes? Well, who wouldn’t! Our efficient staff, with rock-solid experience in the industry, will only be a call away from answering and attending to all your concerns.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-luggage-cart" style="font-size: 36px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Housekeeping</h5>
-                                <p>Keeping your home spick and span is completely our responsibility. Being die-hard fans of Marie Kondo, we like to tidy with regular cleaning services for your rooms as well as the communal spaces.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
+   
 
             <!-- <section style="padding-top: 20px; padding-bottom: 20px;">
                 <div class="row">
@@ -1239,7 +816,153 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </section> -->
             <!-- Facility Section End -->
 
-       
+            <section class="coliving-places" style="padding-bottom: 20px;">
+                <div class="section-title" style="padding-bottom: 20px; margin-top: 10px;">
+                    <center>
+                        <!-- <h3 class="text-secondery" style="color: #f4c024 !important; font-weight: 700;">Premium Co-Living spaces in Bangalore<br>close to these Addresss</h3>  
+                                       -->
+                        <h3 style="color: #f4c024 !important; font-family: 'Montserrat', sans-serif;">PREMIUM
+                            ACCOMMODATION<br>MULTIPLE LOCATIONS</h3>
+
+                    </center>
+                </div>
+                <div class="coliving-places-content">
+                    <ul class="coliving-places-list">
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">KORAMANGALA</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">CHRIST
+                                UNIVERSITY </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">BANNERGHATTA
+                                ROAD </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">SG
+                                PALYA </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">WHITEFIELD</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">ELECTRONIC
+                                CITY </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">HSR
+                                LAYOUT </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">BTM
+                                LAYOUT</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">ITPL</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">HOODI
+                                CIRCLE</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">MARATHAHALLI</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">SPICE
+                                GARDEN LAYOUT </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">DOMLUR</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">INDIRANAGAR</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">HOPE
+                                FARM</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">ULSOOR</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">BAGMANE
+                                TECH PARK</a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">EMBASSY
+                                TECH VILLAGE </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">MG
+                                ROAD </a>
+                        </li>
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">EMBASSY
+                                GOLF LINK</a>
+                        </li>
+
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">UB
+                                CITY</a>
+                        </li>
+
+
+                        <li>
+                            <a target="_blank"
+                                href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-"
+                                style="font-size: 20px; font-weight:800;">100+ LOCATIONS</a>
+                        </li>
+                        <!-- <li>
+                            <a href="#">EPIP Zone</a>
+                        </li>
+                       <li>
+                            <a href="#">Varthur</a>
+                        </li>
+                       <li>
+                            <a href="#">Yemalur</a>
+                        </li>
+                       <li>
+                            <a href="#">Hebbal</a>
+                        </li>
+                       <li>
+                            <a href="#">KG Halli</a>
+                        </li>
+                       <li>
+                            <a href="#">Kadubeesanahalli</a>
+                        </li>
+                       <li>
+                            <a href="#">Bellandur</a>
+                        </li>
+                       <li>
+                            <a href="#">Panathur</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+
+
 
             <!-- <section style="padding-bottom: 20px; padding-top: 20px;">
                 <div class="row">
@@ -1249,7 +972,52 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 </div>
             </section> -->
 
-         
+            <section id="video_zone_mega_742" class="video_section_wrap_ultimate_999">
+                <div class="video_container_pro_111">
+                    <div class="video_title_box_extreme_333">
+                        <h2 class="main-title-area text-center title ">
+                            A picture is worth a thousand words, but a video is priceless.
+                        </h2>
+                        <h3>Scroll to see the magic happen.</h3>
+                    </div>
+        
+                    <div class="video_slider_wrapper_swipe_555">
+                        <div class="video_slider_track_magic_888">
+                            
+                            <!-- Vimeo Video -->
+                            <div class="video_slide_card_epic_222">
+                                <iframe src="https://player.vimeo.com/video/658158612?autoplay=0" 
+                                        class="video_frame_box_legend_444"
+                                        frameborder="0" allow="fullscreen" allowfullscreen>
+                                </iframe>
+                            </div>
+        
+                            <!-- Local Video -->
+                            <div class="video_slide_card_epic_222">
+                                <video controls class="video_file_box_infinity_666">
+                                    <source src="video/bangalore%20_%20hotel%20wala%20PG.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+        
+                        </div>
+        
+                        <!-- Navigation Buttons -->
+                       
+                    </div>
+        
+                </div>
+            </section>
+        
+            <script>
+                function scrollLeft() {
+                    document.querySelector('.video_slider_track_magic_888').scrollBy({ left: -900, behavior: 'smooth' });
+                }
+        
+                function scrollRight() {
+                    document.querySelector('.video_slider_track_magic_888').scrollBy({ left: 900, behavior: 'smooth' });
+                }
+            </script>
 
             <!-- Video Pop Up Section Start -->
             <!-- <section class="full-row bg-white video-section" style="padding-top: 20px; padding-bottom: 0px;">
@@ -1553,9 +1321,51 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
       
-      
+        <section class="photo-track-container row" >
+            <h2 class="main-title-area text-center title" style="color: white !important; text-align:center !important;margin:auto;
+            padding-bottom:20px;">Tenant Reviews</h2>
 
-      
+            <button class="scroll-button left" onclick="scrollTrack('left')">&lt;</button>
+            <div class="photo-track">
+                <img src="img/reviews/review3.jpg" alt="">
+                <img src="img/reviews/review4.jpg" alt="">
+                <img src="img/reviews/review5.jpg" alt="">
+                <img src="img/reviews/review6.jpg" alt="">
+                <img src="img/reviews/review2.jpg" alt="">
+                <img src="img/reviews/review1.jpg" alt="">
+                <img src="img/reviews/review7.jpg" alt="">
+                <img src="img/reviews/review8.jpg" alt="">
+                <img src="img/reviews/review9.jpg" alt="">
+                <img src="img/reviews/review10.jpg" alt="">
+                <img src="img/reviews/review11.jpg" alt="">
+                <img src="img/reviews/review12.jpg" alt="">
+            </div>
+            <button class="scroll-button right" onclick="scrollTrack('right')">&gt;</button>
+        </section>
+
+
+        <section class="carousel-section">
+            <div class="carousel-container">
+                <h2 class="main-title-area text-center title mb-5">Explore Our Gallery</h2>
+                <div class="scroll-carousel">
+                    <div class="carousel-track">
+                        <img src="img/sliderimages/slider1.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider2.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider3.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider4.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider5.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider6.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider7.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider8.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider9.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider10.jpg" class="carousel-image">
+                        <img src="img/sliderimages/slider11.jpg" class="carousel-image">
+                    </div>
+                </div>
+                <!-- <div class="carousel-dots"></div> -->
+            </div>
+        </section>
+        
         <!-- <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const carousel = document.querySelector(".scroll-carousel");
@@ -1736,7 +1546,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </div>
         </section> -->
 
-        <!-- <section class="photo-track-container row" style="background-color: white;">
+        <section class="photo-track-container row" style="background-color: white;">
             <button class="scroll-button left" onclick="scrollTrack('left')">&lt;</button>
             <div class="photo-track">
                 <img src="img/pictographs/img1.jpg" alt="">
@@ -1750,7 +1560,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 
             </div>
             <button class="scroll-button right" onclick="scrollTrack('right')">&gt;</button>
-        </section> -->
+        </section>
 
         <section class="ultra-container">
             <h2 class="epic-title">How does this work?</h2>
