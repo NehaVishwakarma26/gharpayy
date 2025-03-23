@@ -461,8 +461,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div class="image-container swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/similar-listings/solaria.png" alt="Property Image 1"></div>
-                        <div class="swiper-slide"><img src="img/similar-listings/solaria2.png" alt="Property Image 2"></div>
-                        <div class="swiper-slide"><img src="img/similar-listings/solaria3.png" alt="Property Image 3"></div>
+                        <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
+                        <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
                     </div>
                     <!-- Sleek Navigation Arrows -->
                     <div class="swiper-button-next"></div>
@@ -484,63 +484,210 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
                     </div>
                     <div class="price">
-                        <span class="discounted-price">IDR 30,000 / month</span>
-                        <span class="original-price">IDR <s>45,000</s> / month</span>
+                        <span class="discounted-price">INR 30,000 / month</span>
+                        <span class="original-price">INR <s>45,000</s> / month</span>
                     </div>
                 </div>
             </div>
             
             <script>
-                var swiper = new Swiper(".swiper", {
-                    loop: true,
-                    autoplay: { delay: 3000 },
-                    navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-                    pagination: { el: ".swiper-pagination", clickable: true }
-                });
+              document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".swiper").forEach(swiperContainer => {
+        new Swiper(swiperContainer, {
+            loop: true,
+            autoplay: { delay: 3000 },
+            navigation: {
+                nextEl: swiperContainer.querySelector(".swiper-button-next"),
+                prevEl: swiperContainer.querySelector(".swiper-button-prev"),
+            },
+            pagination: {
+                el: swiperContainer.querySelector(".swiper-pagination"),
+                clickable: true
+            }
+        });
+    });
+});
+
             </script>
             
-            
+<!-- snowy luxe-->
 
-            <div class="listing-card" id="listing2">
-                <img src="img/similar-listings/snowy.png" alt="Property 2">
+            <div class="listing-card" id="listing1">
+            
+                <div class="image-container swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/similar-listings/snowy.png" alt="Property Image 1"></div>
+                        <div class="swiper-slide"><img src="img/similar-listings/solaria2.png" alt="Property Image 2"></div>
+                        <div class="swiper-slide"><img src="img/similar-listings/solaria3.png" alt="Property Image 3"></div>
+                    </div>
+                    <!-- Sleek Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            
                 <div class="listing-info">
                     <h3>Snowy Luxe</h3>
-                    <p>Whitefield</p>
-                    <span class="status">Available</span>
+                    <p>Premium room with external window</p>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> Whitefield
+                    </div>
+                    <div class="commute">
+                        <i class="fas fa-subway"></i> <span>25 mins to metro</span>
+                    </div>
+                    <div class="lease-start">
+                        <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
+                    </div>
+                    <div class="price">
+                        <span class="discounted-price">INR 30,000 / month</span>
+                        <span class="original-price">INR <s>45,000</s> / month</span>
+                    </div>
                 </div>
             </div>
-            <div class="listing-card" id="listing3">
-                <img src="img/similar-listings/spot.png" alt="Property 3">
-                <div class="listing-info">
-                    <h3>Spot Coed</h3>
-                    <p>Whitefield</p>
-                    <span class="status">Available</span>
+            
+            <!-- spot coed-->
+            <div class="listing-card" id="listing1">
+            
+                <div class="image-container swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/similar-listings/spot.png" alt="Property Image 1"></div>
+                        <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
+                        <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
+                    </div>
+                    <!-- Sleek Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination"></div>
                 </div>
-            </div>
-            <div class="listing-card" id="listing4">
-                <img src="img/similar-listings/velvet.png" alt="Property 4">
+            
                 <div class="listing-info">
                     <h3>Velvet Girls</h3>
-                    <p>MG Road</p>
-                    <span class="status">Available</span>
+                    <p>Premium room with external window</p>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> Whitefield
+                    </div>
+                    <div class="commute">
+                        <i class="fas fa-subway"></i> <span>25 mins to metro</span>
+                    </div>
+                    <div class="lease-start">
+                        <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
+                    </div>
+                    <div class="price">
+                        <span class="discounted-price">INR 30,000 / month</span>
+                        <span class="original-price">INR <s>45,000</s> / month</span>
+                    </div>
                 </div>
             </div>
-            <div class="listing-card" id="listing5">
-                <img src="img/similar-listings/baxk.png" alt="Property 5">
-                <div class="listing-info">
-                    <h3>Baxk Boys</h3>
-                    <p>Koramangala</p>
-                    <span class="status">Available</span>
+
+          <!-- velvet-->
+          <div class="listing-card" id="listing1">
+            
+            <div class="image-container swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/similar-listings/velvet.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
+                </div>
+                <!-- Sleek Navigation Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination"></div>
+            </div>
+        
+            <div class="listing-info">
+                <h3>Snowy Luxe</h3>
+                <p>Premium room with external window</p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Whitefield
+                </div>
+                <div class="commute">
+                    <i class="fas fa-subway"></i> <span>25 mins to metro</span>
+                </div>
+                <div class="lease-start">
+                    <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
+                </div>
+                <div class="price">
+                    <span class="discounted-price">INR 30,000 / month</span>
+                    <span class="original-price">INR <s>45,000</s> / month</span>
                 </div>
             </div>
-            <div class="listing-card" id="listing6">
-                <img src="img/similar-listings/7ths.png" alt="Property 6">
-                <div class="listing-info">
-                    <h3>7ths Coed</h3>
-                    <p>HSR Layout</p>
-                    <span class="status">Available</span>
+        </div>
+            
+            
+        <div class="listing-card" id="listing1">
+            
+            <div class="image-container swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/similar-listings/baxk.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
+                </div>
+                <!-- Sleek Navigation Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination"></div>
+            </div>
+        
+            <div class="listing-info">
+                <h3>Baxk Boys</h3>
+                <p>Premium room with external window</p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Whitefield
+                </div>
+                <div class="commute">
+                    <i class="fas fa-subway"></i> <span>25 mins to metro</span>
+                </div>
+                <div class="lease-start">
+                    <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
+                </div>
+                <div class="price">
+                    <span class="discounted-price">INR 30,000 / month</span>
+                    <span class="original-price">INR <s>45,000</s> / month</span>
                 </div>
             </div>
+        </div>
+
+        
+        <div class="listing-card" id="listing1">
+            
+            <div class="image-container swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/similar-listings/7ths.png" alt="Property Image 1"></div>
+                    <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
+                    <div class="swiper-slide"><img src="#" alt="Property Image 3"></div>
+                </div>
+                <!-- Sleek Navigation Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination"></div>
+            </div>
+        
+            <div class="listing-info">
+                <h3>7ths Coed</h3>
+                <p>Premium room with external window</p>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i> Whitefield
+                </div>
+                <div class="commute">
+                    <i class="fas fa-subway"></i> <span>25 mins to metro</span>
+                </div>
+                <div class="lease-start">
+                    <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
+                </div>
+                <div class="price">
+                    <span class="discounted-price">INR 30,000 / month</span>
+                    <span class="original-price">INR <s>45,000</s> / month</span>
+                </div>
+            </div>
+        </div>
+
+
+           
         </div>
     </section>
   
