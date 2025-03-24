@@ -1296,7 +1296,7 @@ a.btn-scroll:hover,
 .accordion .card-header:hover,
 .bootstrap-select .dropdown-menu.inner li.selected a,
 .room-thumb .upper-place-top-left span {
-	background-color: rgb(255, 255, 255) !important;
+	background-color: #F0EAD6 !important;
 }
 
 /*===== Secondery Font Color CSS =====*/
@@ -2098,6 +2098,7 @@ a.btn-scroll b {
     padding: 50px 20px;
     text-align: center;
     width: 100%;
+	background-color: #F0EAD6;
 }
 
 .journey-container {
@@ -2231,7 +2232,7 @@ a.btn-scroll b {
 
 /* carousel */
 .carousel-section {
-    background: #f8f9fa;
+    background: #F0EAD6;
     padding: 60px 20px;
     text-align: center;
     width: 100%;
@@ -5009,7 +5010,7 @@ ol {
 /* video section */
 #video_zone_mega_742 {
     padding: 40px 20px 0;
-    background-color: white;
+    background-color: #F0EAD6;
 	width: 100%;
 }
 
