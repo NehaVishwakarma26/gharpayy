@@ -333,7 +333,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     padding: 0.6rem;
     font-family: 'Montserrat';
     color: white !important;
-    background-color: #c10b1a;
+    background-color: #0943A0;
+    ;
 }
     .listing-info p {
       color: rgb(56, 56, 56);
@@ -391,7 +392,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     font-weight: bold;
     color: red;
     margin-left: 1em;
-    padding-bottom: 1em;
+    /* padding-bottom: 1em; */
 }
 .original-price {
     font-size: 14px;
@@ -429,6 +430,75 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     font-weight: bold;
 }
 
+.gharpayy-tag {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    background: #F4C024;
+    color:black ;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 0px 10px 0px 0px;
+    font-weight: bold;
+    z-index: 10;
+}
+.image-container {
+    position: relative; /* Ensure proper positioning */
+}
+
+.whatsapp-button {
+    margin-top: 1.2em;
+    display: flex
+;
+    align-items: center;
+    /* justify-content: center; */
+    margin-left: 1em;
+    margin-bottom: 1.2em;
+
+}
+
+.whatsapp-button a {
+    display: flex
+;
+    align-items: center;
+    background-color: #00D757;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.whatsapp-button i {
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.whatsapp-float {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #25D366;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float a {
+    color: white;
+    font-size: 20px;
+}
+
+.whatsapp-float i {
+    font-size: 22px;
+}
+
 
 
     /* Responsive Adjustments */
@@ -459,6 +529,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
+                    <div class="gharpayy-tag">Gharpayy Classics</div>
+
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/similar-listings/solaria.png" alt="Property Image 1"></div>
                         <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
@@ -484,10 +556,22 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <i class="fas fa-calendar-alt"></i> <span>Lease starts from 25 March</span>
                     </div>
                     <div class="price">
-                        <span class="discounted-price">INR 30,000 / month</span>
-                        <span class="original-price">INR <s>45,000</s> / month</span>
+                        <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+                        <!-- <span class="original-price">INR <s>45,000</s> / month</span> -->
                     </div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/917988114576" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                    
                 </div>
+                <!-- <div class="whatsapp-float">
+                    <a href="https://wa.me/917988114576" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                 -->
             </div>
             
             <script>
@@ -515,6 +599,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
+                    <div class="gharpayy-tag">Gharpayy Classics</div>
+
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/similar-listings/snowy.png" alt="Property Image 1"></div>
                         <div class="swiper-slide"><img src="img/similar-listings/solaria2.png" alt="Property Image 2"></div>
@@ -543,6 +629,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <span class="discounted-price">INR 30,000 / month</span>
                         <span class="original-price">INR <s>45,000</s> / month</span>
                     </div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/917988114576" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
             
@@ -550,6 +641,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
+                    <div class="gharpayy-tag">Gharpayy Classics</div>
+
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/similar-listings/spot.png" alt="Property Image 1"></div>
                         <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
@@ -578,6 +671,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <span class="discounted-price">INR 30,000 / month</span>
                         <span class="original-price">INR <s>45,000</s> / month</span>
                     </div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/917988114576" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -585,6 +683,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <div class="listing-card" id="listing1">
             
             <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="img/similar-listings/velvet.png" alt="Property Image 1"></div>
                     <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
@@ -613,6 +713,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <span class="discounted-price">INR 30,000 / month</span>
                     <span class="original-price">INR <s>45,000</s> / month</span>
                 </div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/917988114576" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
             
@@ -620,6 +725,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <div class="listing-card" id="listing1">
             
             <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="img/similar-listings/baxk.png" alt="Property Image 1"></div>
                     <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
@@ -648,6 +755,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <span class="discounted-price">INR 30,000 / month</span>
                     <span class="original-price">INR <s>45,000</s> / month</span>
                 </div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/917988114576" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -655,6 +767,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <div class="listing-card" id="listing1">
             
             <div class="image-container swiper">
+                <div class="gharpayy-tag">Gharpayy Classics</div>
+
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="img/similar-listings/7ths.png" alt="Property Image 1"></div>
                     <div class="swiper-slide"><img src="#" alt="Property Image 2"></div>
@@ -682,6 +796,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div class="price">
                     <span class="discounted-price">INR 30,000 / month</span>
                     <span class="original-price">INR <s>45,000</s> / month</span>
+                </div>
+                <div class="whatsapp-button">
+                    <a href="https://wa.me/917988114576" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
