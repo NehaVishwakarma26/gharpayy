@@ -2373,6 +2373,7 @@ a.btn-scroll b {
     text-align: center;
     padding: 50px 20px;
     width: 100%;
+	background-color: #FFFFF0 !important;
 }
 
 /* Heading */
@@ -2651,6 +2652,7 @@ a.btn-scroll b {
     max-width: 100%;
     border-radius: 10px;
     padding: 40px;
+	background-color: #FFFFF0 !important;
 }
 
 .premium-stats-section .full-row {
