@@ -499,8 +499,16 @@ h6,
 	color: #0943A0   !important;
 }
 
+@font-face {
+    font-family: 'Larken Black';
+    src: url('larken-font/Larken Serif Trial/LarkenDEMO-Black.otf') format('opentype');
+    font-style: normal;
+}
+
 .listing-images-wrapper h2{
 	color: #0943A0   !important;
+	font-family: 'Larken Black';
+	
 }
 .listing-images {
 	display: flex;
@@ -2170,6 +2178,8 @@ a.btn-scroll b {
     font-size: 24px;
     margin: 0;
     color: #0943a0;
+	font-family: 'Larken Black';
+
 }
 
 .step-content p {
@@ -2377,7 +2387,7 @@ a.btn-scroll b {
     text-align: center;
     padding: 50px 20px;
     width: 100%;
-	background-color: #FFFFF0 !important;
+	background-color: #F0EAD6 !important;
 }
 
 /* Heading */
@@ -2656,7 +2666,7 @@ a.btn-scroll b {
     max-width: 100%;
     border-radius: 10px;
     padding: 40px;
-	background-color: #FFFFF0 !important;
+	background-color: #F0EAD6 !important;
 }
 
 .premium-stats-section .full-row {
@@ -2825,7 +2835,7 @@ h2,
 h3,
 .h3,
 .room-thumb .upper-place-top-left {
-	font-family: var(--theme-highlight-font);
+	font-family: 'Larken Black';
 }
 
 h1,
@@ -5015,6 +5025,7 @@ ol {
     padding: 20px;
     margin: 0 auto;
     margin-bottom: 30px;
+	font-family: 'Larken Black';
 }
 
 .video_main_heading_glow_777 {
