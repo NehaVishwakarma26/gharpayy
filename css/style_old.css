@@ -2366,6 +2366,10 @@ a.btn-scroll b {
 /* carousel section end */
 
 
+/* larken font */
+
+
+
 /* how it works */
 
 /* Container */
@@ -2425,6 +2429,7 @@ a.btn-scroll b {
     font-weight: bold;
     margin-top: 15px;
     color: #0a2746;
+	font-family: 'Larken Black';
 }
 
 /* Description */
@@ -2560,7 +2565,6 @@ a.btn-scroll b {
 .main-title {
     font-size: 36px;
     font-weight: bold;
-    font-style: italic;
     color: #064789;
     display: inline-block;
     position: relative;
