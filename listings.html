@@ -1451,65 +1451,118 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
             <!-- Achievement Section End -->
 
-            <section class="full-row bg-white" style="padding-bottom: 5px; padding-top: 30px;background-color:#F0EAD6  !important;" id="amenities ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="main-title-area text-center">
-                                <h2 class="title left-right-line mb-5">Amenities</h2>
-                            </div>
+            <section class="amenities">
+                <h2>Amenities</h2>
+                <div class="grid-container-2" id="grid-container-2">
+                    <!-- Box 1 -->
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                            <h3>Kitchen Essentials</h3>
                         </div>
-                        <!-- <div class="col-lg-12">
-                            <img src="img/amenities.jpg">
-                        </div> -->
+                        <ul id="kitchen-list">
+                           
+                        </ul>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-coffee" style="font-size: 34px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Power Breakfast</h5>
-                                <p>How many times do you skip having breakfast (the most important meal of the day!) Innumerable times, right! We know the banes of your life and have you covered with free breakfast every morning to charge your fuel.</p>
-                            </div>
+        
+                    <!-- Box 2 -->
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                            <h3>Utilities</h3>
                         </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-unlock-alt" style="font-size: 34px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">24*7 Security</h5>
-                                <p>If you can’t get a night of peaceful sleep without worrying about who would break in, can you really call that place your home? With CCTV cameras, biometric admissions, security personnel round the clock, and enabling them with the latest tech, we never take safety lightly.</p>
-                            </div>
+                        <ul id="utilities-list">
+                           
+                        </ul>
+                    </div>
+        
+                    <!-- Box 3 -->
+                    <div class="grid-box full-width">
+                        <div class="icon-title" style="width: 100%;">
+                            <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                            <h3>Comfort</h3>
                         </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-tshirt" style="font-size: 36px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Laundry</h5>
-                                <p>Early morning meetings, impromptu travels, date nights, or jamming with your gang—we want you to deck up the best without hassling over whether you missed washing your favorite shirt or dress. Self-service washing machines as well as dedicated laundry services—you can choose your pick.</p>
-                            </div>
+                        <ul id="comfort-list">
+                            
+                        </ul>
+                    </div>
+        
+                    <!-- Box 4 -->
+        
+        
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/amenities-icons/mop_7842219.png" alt="Security Icon" />
+                            <h3>Facilities</h3>
                         </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-wifi" style="font-size: 34px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Wifi</h5>
-                                <p>Our thumb rule: only a battle-tested wifi deserves your time. With unlimited access to high-speed internet, we want your lightbulb moments to be as random as possible and create, develop, and have fun while you’re at it.</p>
-                            </div>
+                        <ul id="facilities-list">
+                           
+                        </ul>
+                    </div>
+        
+                    <div class="grid-box">
+                        <div class="icon-title">
+                            <img src="img/icons_1/cctv_1367174.png" alt="Security Icon" />
+                            <h3>Security</h3>
                         </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-concierge-bell" style="font-size: 36px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Concierge</h5>
-                                <p>Wouldn’t you love to have a trained hospitality professional take care of all your woes? Well, who wouldn’t! Our efficient staff, with rock-solid experience in the industry, will only be a call away from answering and attending to all your concerns.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6">
-                            <div class="service-item-2 mb-4 bg-white text-left">
-                                <i class="fas fa-luggage-cart" style="font-size: 36px; color: #f4c024;"></i>
-                                <h5 class="text-secondery mt-2">Housekeeping</h5>
-                                <p>Keeping your home spick and span is completely our responsibility. Being die-hard fans of Marie Kondo, we like to tidy with regular cleaning services for your rooms as well as the communal spaces.</p>
-                            </div>
-                        </div>
+                        <ul id="security-list">
+                            
+                        </ul>
                     </div>
                 </div>
             </section>
-            
+
+            <style>
+                .amenities h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.amenities {
+    padding: 20px;
+    padding-top: 20px;
+    /* text-align: center; */
+}
+.grid-box {
+    border: 2px solid var(--secondery-theme-color);
+    border-radius: 8px;
+    border-top-left-radius: 45px;
+    padding: 20px;
+    padding-right: 5px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.grid-container-2 {
+    display: grid
+;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.icon-title {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.icon-title img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 2rem;
+}
+@media (max-width: 750px) {
+    .icon-title img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 2rem;
+    }
+}
+
+
+            </style>
+
+
+           
 
             <!-- <section style="padding-top: 20px; padding-bottom: 20px;">
                 <div class="row">
