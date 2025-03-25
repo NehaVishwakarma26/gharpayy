@@ -2230,8 +2230,34 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <h6>Phone Number</h6>
                             <span>+91 83073 96042</span>
                             <script>
-                                gtag('config', 'AW-11102447116/QaOoCOXa-vsDEIzMh64p', {
-                                    'phone_conversion_number': '08307396042'
+                                document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+                                    event.preventDefault(); // Prevent default form submission
+                            
+                                    // Get form values
+                                    let name = document.querySelector("[name='name']").value.trim();
+                                    let email = document.querySelector("[name='email']").value.trim();
+                                    let phone = document.querySelector("[name='phone']").value.trim();
+                                    let message = document.querySelector("[name='message']").value.trim();
+                            
+                                    // WhatsApp Number (with country code)
+                                    let whatsappNumber = "918307396042"; // Ensure correct country code
+                            
+                                    // Format message
+                                    let whatsappMessage = `Hello, I am *${name}*.\n\n📧 Email: ${email}\n📱 Phone: ${phone}\n📝 Message: ${message}\n\nPlease assist me.`;
+                            
+                                    // Encode message for URL
+                                    let encodedMessage = encodeURIComponent(whatsappMessage);
+                            
+                                    // WhatsApp URL
+                                    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                            
+                                    // Open WhatsApp in a new tab
+                                    window.open(whatsappURL, "_blank");
+                            
+                                    // Optional: Alert user if WhatsApp does not open
+                                    setTimeout(() => {
+                                        alert("If WhatsApp didn't open, please check your browser settings.");
+                                    }, 2000);
                                 });
                             </script>
 
