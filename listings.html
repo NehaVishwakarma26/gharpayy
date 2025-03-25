@@ -1457,7 +1457,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <!-- Box 1 -->
                     <div class="grid-box">
                         <div class="icon-title">
-                            <img src="img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\appliance_1198306.png" alt="Kitchen Essentials Icon" />
                             <h3>Kitchen Essentials</h3>
                         </div>
                         <ul id="kitchen-list">
@@ -1468,7 +1468,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <!-- Box 2 -->
                     <div class="grid-box">
                         <div class="icon-title">
-                            <img src="img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\electric-gear_3520842.png" alt="Utilities Icon" />
                             <h3>Utilities</h3>
                         </div>
                         <ul id="utilities-list">
@@ -1479,7 +1479,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <!-- Box 3 -->
                     <div class="grid-box full-width">
                         <div class="icon-title" style="width: 100%;">
-                            <img src="img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\/meditation_6911426.png" alt="Comfort Icon" />
                             <h3>Comfort</h3>
                         </div>
                         <ul id="comfort-list">
@@ -1492,7 +1492,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         
                     <div class="grid-box">
                         <div class="icon-title">
-                            <img src="img/amenities-icons/mop_7842219.png" alt="Security Icon" />
+                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\mop_7842219.png" alt="Security Icon" />
                             <h3>Facilities</h3>
                         </div>
                         <ul id="facilities-list">
@@ -1502,7 +1502,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         
                     <div class="grid-box">
                         <div class="icon-title">
-                            <img src="img/icons_1/cctv_1367174.png" alt="Security Icon" />
+                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\cctv_1367174.png" alt="Security Icon" />
                             <h3>Security</h3>
                         </div>
                         <ul id="security-list">
@@ -1513,50 +1513,63 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             </section>
 
             <style>
-                .amenities h2 {
+        
+        .amenities h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    text-align: center;
 }
+
 .amenities {
     padding: 20px;
     padding-top: 20px;
-    /* text-align: center; */
+    width: 100%;
 }
+
+/* Grid Container */
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+}
+
+/* Grid Box Styling */
 .grid-box {
     border: 2px solid var(--secondery-theme-color);
     border-radius: 8px;
     border-top-left-radius: 45px;
     padding: 20px;
-    padding-right: 5px;
-    text-align: left;
+    text-align: center;
     background-color: #fff;
 }
 
-.grid-container-2 {
-    display: grid
-;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+/* Full-width card (Comfort) */
+.full-width {
+    grid-column: span 2; /* Makes it take the full row */
 }
 
+/* Icon Styling */
 .icon-title {
     margin-bottom: 15px;
-    text-align: center;
 }
-
 
 .icon-title img {
     width: 90px;
     height: 90px;
     margin-bottom: 2rem;
 }
-@media (max-width: 750px) {
-    .icon-title img {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 2rem;
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .grid-container-2 {
+        grid-template-columns: 1fr; /* Switch to 1 column */
+    }
+
+    .full-width {
+        grid-column: span 1; /* Keeps it full width on mobile */
     }
 }
+
 
 
             </style>
@@ -2497,10 +2510,38 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <h6>Phone Number</h6>
                             <span>+91 83073 96042</span>
                             <script>
-                                gtag('config', 'AW-11102447116/QaOoCOXa-vsDEIzMh64p', {
-                                    'phone_conversion_number': '08307396042'
+                                document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+                                    event.preventDefault(); // Prevent default form submission
+                            
+                                    // Get form values
+                                    let name = document.querySelector("[name='name']").value.trim();
+                                    let email = document.querySelector("[name='email']").value.trim();
+                                    let phone = document.querySelector("[name='phone']").value.trim();
+                                    let message = document.querySelector("[name='message']").value.trim();
+                            
+                                    // WhatsApp Number (with country code)
+                                    let whatsappNumber = "918307396042"; // Ensure correct country code
+                            
+                                    // Format message
+                                    let whatsappMessage = `Hello, I am *${name}*.\n\n📧 Email: ${email}\n📱 Phone: ${phone}\n📝 Message: ${message}\n\nPlease assist me.`;
+                            
+                                    // Encode message for URL
+                                    let encodedMessage = encodeURIComponent(whatsappMessage);
+                            
+                                    // WhatsApp URL
+                                    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                            
+                                    // Open WhatsApp in a new tab
+                                    window.open(whatsappURL, "_blank");
+                            
+                                    // Optional: Alert user if WhatsApp does not open
+                                    setTimeout(() => {
+                                        alert("If WhatsApp didn't open, please check your browser settings.");
+                                    }, 2000);
                                 });
                             </script>
+                            
+                            
 
 
                         </div>
