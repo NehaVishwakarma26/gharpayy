@@ -2404,6 +2404,13 @@ a.btn-scroll b {
     margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+    .epic-title {
+        text-align: left;
+        padding-left: 15px;
+    }
+}
+
 /* Wrapper */
 .flow-wrapper {
     display: flex;
@@ -2419,7 +2426,7 @@ a.btn-scroll b {
     flex: 1;
     min-width: 280px; /* Ensures boxes don't shrink too much */
     padding: 25px;
-    background: #ffffff;
+    background: #0943a066;
     border-radius: 12px;
     box-shadow: 6px 6px 0 -2px #000;
     text-align: left;
@@ -2587,6 +2594,14 @@ a.btn-scroll b {
     padding: 10px 20px;
 }
 
+@media (max-width: 768px) {
+    .main-title {
+        padding: 10px 0px;
+        text-align: left;
+    }
+}
+
+
 .left-right-border::before,
 .left-right-border::after {
     content: "";
@@ -2673,6 +2688,7 @@ a.btn-scroll b {
     border-radius: 10px;
     padding: 40px;
 	background-color: #F0EAD6 !important;
+	padding-bottom: 5em !important;
 }
 
 .premium-stats-section .full-row {
@@ -2681,7 +2697,7 @@ a.btn-scroll b {
     padding-bottom: 80px;
     padding-top: 80px;
     border-radius: 20px;
-    background-color: #F4C024 !important;}
+    background-color: #0943a0b5 !important;}
 
 
 /*============================================
@@ -3145,7 +3161,8 @@ section {
 
 .icon-block-1 span {
 	display: block;
-	line-height: 30px
+	line-height: 30px;
+	color: #000;
 }
 
 .icon-block-1 i {
