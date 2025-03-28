@@ -292,7 +292,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div class="cosmic_hero_container">
                     <div class="nebula_text_box">
                         
-                        <h1 class="stellar_heading">
+                        <h1 class="stellar_heading" style="text-align: left !important;">
                             Furnished rooms for
                             healthy, hygienic, happy living.
                         </h1>
@@ -404,8 +404,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <section id="journey-section">
                 <div class="">
                     <div class="main-title-area text-center">
-                        <h2 class="title left-right-line mb-4">Why Choose Us</h2>
-                    </div>
+                        <h2 class="title left-right-line mb-4" 
+                        style="
+                          text-align: center; 
+                          display: block; 
+                          width: 100%;
+                          @media (min-width: 1024px) { 
+                            margin-left: auto; 
+                            margin-right: auto; 
+                            text-align: center;
+                          }
+                        ">
+                      Why Choose Us
+                    </h2>
+                                        </div>
                     <span class="subtext text-secondary text-center d-block mx-auto mb-5 box-width">
                         Across the street from the ordinary
                     </span>
@@ -504,7 +516,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <div class="row">
                         <div class="col-lg-7 col-md-12">
                             <div class="main-title-area">
-                                <h2 class="title mb-3">Gharpayy</h2>
+                                <h2 class="title mb-3" style="text-align: left !important;">Gharpayy</h2>
                             </div>
                             <span class="subtext text-secondary mb-4">Days Inn There you go</span>
                             <p>GHARPAYY provides safe and healthy rental accommodations for urban millennials. We've
@@ -535,10 +547,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-5 col-md-12">
-                            <div class="img-1 mt-sm-30"><img src="img/squire/fully-furnished-pg-accommodations.html"
-                                    alt="The Valena"></div>
-                        </div>
+                     
                     </div>
                 </div>
             </section>
@@ -551,7 +560,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="col-xl-4 col-md-12">
                             <div class="facility py-20">
                                 <div class="main-title-area mb-3">
-                                    <h2 class="title right-line text-white">Our Facility</h2>
+                                    <h2 class="title right-line text-white" style="text-align: left !important; margin-left: 0  !important;">Our Facility</h2>
                                 </div>
                                 <p>Focussed on providing you with top-notch standards, our coliving experience is
                                     founded on <strong>3Cs</strong>, so that you can do the living, and leave the rest
@@ -1147,6 +1156,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     .stellar_heading,.main-title,.main-title-area.text-center .title,.epic-title,.main-title-area .title {
         font-family: 'Larken Black', sans-serif !important;
     }
+
+    @media (min-width: 1024px) { /* Applies styles only for large screens */
+    .stellar_heading,
+    .main-title,
+    .main-title-area.text-center .title,
+    .epic-title,
+    .main-title-area .title {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
     
     </style>
 
