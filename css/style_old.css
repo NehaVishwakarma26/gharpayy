@@ -1311,6 +1311,7 @@ a.btn-scroll:hover,
 footer .social-media li:hover a,
 .widget.events a:hover,
 .tag ul li a {
+	padding-top: 10px;
 	text-align: left;
 	color: var(--secondery-theme-color) !important;
 }
@@ -2995,8 +2996,8 @@ section {
 ==========================================================*/
 .main-title-area.text-center .title {
 	display: table;
-	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
 }
 
 .subtext {
@@ -3734,7 +3735,9 @@ form.language .dropdown-toggle::after {
 }
 
 .free-service-item span [class^="flaticon-"]:before {
-	line-height: 70px
+	line-height: 70px;
+	padding: 10px;
+
 }
 
 .free-service-item .inner-title {
@@ -4402,6 +4405,7 @@ hero section
         height: auto;
         padding: 30px;
         border-radius: 20px 10px 10px;
+		margin-left: 1em;
     }
 }
 
@@ -5011,7 +5015,13 @@ ol {
 }
 
 .facility-item-1 h5 {
-	margin: 10px 0 20px
+	margin: 10px 0 20px;
+	text-align: left;
+
+}
+
+.facility-item-1 p{
+	text-align: left  !important;
 }
 
 
@@ -6610,7 +6620,8 @@ No media query for `xs` since this is the default in Bootstrap*/
 	}
 
 	.subtext.box-width {
-		width: 100%
+		width: 100%;
+		text-align: left;
 	}
 
 	.header-1,
