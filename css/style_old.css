@@ -2630,6 +2630,13 @@ a.btn-scroll b {
     margin: auto;
 }
 
+@media (max-width: 768px) {
+	.mobile-align-left {
+	  text-align: left !important;
+	}
+  }
+  
+
 /* Feature Box */
 .unique-feature-item {
 	margin-top: 20px;
