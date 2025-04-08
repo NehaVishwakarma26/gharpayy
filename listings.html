@@ -7,6 +7,7 @@
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16635741476">
@@ -190,19 +191,19 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                                         </li>
                                         <li class="nav-item"> <a class="nav-link" href="about.html">About Us</a> </li>
 
-                                        <li class="nav-item"> <a class="nav-link" href="#amenities">Amenities</a> </li>
+                                        <li class="nav-item"> <a class="nav-link" href="amenities.html">Amenities</a> </li>
                                         <!-- <li class="nav-item"> <a class="nav-link dropdown-toggle" href="blog-grid-classic.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> News </a>
                                         
                                     </li> -->
                                     <li class="nav-item"> <a class="nav-link" href="#">Careers</a> </li>
-                                    <li class="nav-item"> <a class="nav-link" href="#">PG Photos</a> </li>
+                                    <li class="nav-item"> <a class="nav-link" href="#gallery">PG Photos</a> </li>
                                         <li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
                                         <li class="nav-item"> <a class="nav-link" href="#">FAQ</a> </li>
                                         <li class="nav-item"> <a class="nav-link"
                                                 href="gurugram/index.html">GharPayy-GURUGRAM</a> </li>
                                     </ul>
                                     <a class="btn btn-secondery-bg ml-2" style="font-weight: 700;" target="_blank"
-                                        href="https://api.whatsapp.com/send?phone=+917988114576&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
+                                        href="https://api.whatsapp.com/send?phone=+918307396042&amp;text=Heyy!%20GHARPAYY,%20I%20am%20looking%20for%20a%20GOOD-ACCOMODATION%20in%20the%20AREA%20NEARBY-">Whatsapp
                                         Now</a>
                                     <!-- Event snippet for GharPayy Page View WT conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
@@ -291,7 +292,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 
                 <script>
                     function scrollToCarousel() {
-                        document.querySelector('.similar-listings').scrollIntoView({ behavior: 'smooth' });
+                        document.querySelector('.listings-container').scrollIntoView({ behavior: 'smooth' });
                     }
                 </script>
 
@@ -328,7 +329,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     /* Image Styling */
     .listing-card img {
         width: 100%;
-        height: 100%;
+        height: 400px;
         object-fit: cover;
     }
   
@@ -541,7 +542,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   
      <section  class="premium-features-section"  style=" background-color: #FAF0E6;  width: 100% !important; padding: 20px 0px !important;">
         <div class="headline-area text-center" style="margin-bottom: 0px !important;">
-            <h2 class="main-title left-right-border mb-4">Gharpayy Living – Designed for You</h2>
+            <h2 class="main-title left-right-border mb-4" style="padding: 10px 20px !important;">Gharpayy Living – Designed for You</h2>
         </div>
       
       
@@ -1267,53 +1268,54 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <!-- Why Choose Us Section Start -->
             <section class="premium-features-section" style="background-color: #f4c024;">
                 <div class="exclusive-features-container">
-                    <div class="headline-area text-center">
-                        <h2 class="main-title left-right-border mb-4">Super Gharpayy</h2>
+                  <div class="headline-area text-center">
+                    <h2 class="main-title left-right-border mb-4">Super Gharpayy</h2>
+                  </div>
+                  <div class="luxury-features-grid" style="color: black;">
+                    <div class="unique-feature-item" id="feature-room" data-aos="fade-up" data-aos-delay="100">
+                      <span class="material-icons">hotel</span>
+                      <h3>High Quality Rooms</h3>
+                      <p>Experience the finest rooms designed for comfort and luxury.</p>
                     </div>
-                    <div class="luxury-features-grid" style="color: black;">
-                        <div class="unique-feature-item" id="feature-room">
-                            <span class="material-icons">hotel</span>
-                            <h3>High Quality Rooms</h3>
-                            <p>Experience the finest rooms designed for comfort and luxury.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-comfort">
-                            <span class="material-icons">weekend</span>
-                            <h3>Comfort Like Home</h3>
-                            <p>Feel at home with cozy interiors and premium facilities.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-security">
-                            <span class="material-icons">security</span>
-                            <h3>High Class Security</h3>
-                            <p>Your safety is our priority with top-notch security systems.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-gym-gaming">
-                            <span class="material-icons">sports_esports</span>
-                            <h3>GYM N Gaming Zone</h3>
-                            <p>Stay fit and entertained with our gym and gaming area.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-lifestyle">
-                            <span class="material-icons">emoji_events</span>
-                            <h3>Unlock New Lifestyle</h3>
-                            <p>Enjoy a premium lifestyle with modern amenities.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-support">
-                            <span class="material-icons">support_agent</span>
-                            <h3>Always At Your Service</h3>
-                            <p>24/7 assistance to ensure your comfort and convenience.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-laundry">
-                            <span class="material-icons">local_laundry_service</span>
-                            <h3>Free Laundry With Iron</h3>
-                            <p>Complimentary laundry and ironing service for hassle-free living.</p>
-                        </div>
-                        <div class="unique-feature-item" id="feature-workstations">
-                            <span class="material-icons">computer</span>
-                            <h3>Cool Workstations</h3>
-                            <p>Productive and stylish workspaces designed for professionals.</p>
-                        </div>
+                    <div class="unique-feature-item" id="feature-comfort" data-aos="fade-up" data-aos-delay="200">
+                      <span class="material-icons">weekend</span>
+                      <h3>Comfort Like Home</h3>
+                      <p>Feel at home with cozy interiors and premium facilities.</p>
                     </div>
+                    <div class="unique-feature-item" id="feature-security" data-aos="fade-up" data-aos-delay="300">
+                      <span class="material-icons">security</span>
+                      <h3>High Class Security</h3>
+                      <p>Your safety is our priority with top-notch security systems.</p>
+                    </div>
+                    <div class="unique-feature-item" id="feature-gym-gaming" data-aos="fade-up" data-aos-delay="400">
+                      <span class="material-icons">sports_esports</span>
+                      <h3>Gym N Gaming Zone</h3>
+                      <p>Stay fit and entertained with our gym and gaming area.</p>
+                    </div>
+                    <div class="unique-feature-item" id="feature-lifestyle" data-aos="fade-up" data-aos-delay="500">
+                      <span class="material-icons">emoji_events</span>
+                      <h3>Unlock New Lifestyle</h3>
+                      <p>Enjoy a premium lifestyle with modern amenities.</p>
+                    </div>
+                    <div class="unique-feature-item" id="feature-support" data-aos="fade-up" data-aos-delay="600">
+                      <span class="material-icons">support_agent</span>
+                      <h3>Always At Your Service</h3>
+                      <p>24/7 assistance to ensure your comfort and convenience.</p>
+                    </div>
+                    <div class="unique-feature-item" id="feature-laundry" data-aos="fade-up" data-aos-delay="700">
+                      <span class="material-icons">local_laundry_service</span>
+                      <h3>Free Laundry With Iron</h3>
+                      <p>Complimentary laundry and ironing service for hassle-free living.</p>
+                    </div>
+                    <div class="unique-feature-item" id="feature-workstations" data-aos="fade-up" data-aos-delay="800">
+                      <span class="material-icons">computer</span>
+                      <h3>Cool Workstations</h3>
+                      <p>Productive and stylish workspaces designed for professionals.</p>
+                    </div>
+                  </div>
                 </div>
-            </section>
+              </section>
+              
             
             <!-- Why Choose Us Section End -->
 
@@ -1408,7 +1410,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <div class="card bg-light shadow-lg p-4">
         <div class="text-center mb-4">
             <h2 class="main-title">Why Choose Gharpayy?</h2>
-            <p class="text-muted">Providing the best living experience with premium services.</p>
+            <p class="text-muted" style="text-align: left;">Providing the best living experience with premium services.</p>
         </div>
         <div class="full-row py-5 bg-primary text-center">
             <div class="container">
@@ -1454,63 +1456,55 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <section class="amenities">
                 <h2>Amenities</h2>
                 <div class="grid-container-2" id="grid-container-2">
-                    <!-- Box 1 -->
-                    <div class="grid-box">
-                        <div class="icon-title">
-                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\appliance_1198306.png" alt="Kitchen Essentials Icon" />
-                            <h3>Kitchen Essentials</h3>
-                        </div>
-                        <ul id="kitchen-list">
-                           
-                        </ul>
+              
+                  <!-- Box 1 -->
+                  <div class="grid-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-title">
+                      <img src="new_section_for_listing/admin.gharpayy.in/img/amenities-icons/appliance_1198306.png" alt="Kitchen Essentials Icon" />
+                      <h3>Kitchen Essentials</h3>
                     </div>
-        
-                    <!-- Box 2 -->
-                    <div class="grid-box">
-                        <div class="icon-title">
-                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\electric-gear_3520842.png" alt="Utilities Icon" />
-                            <h3>Utilities</h3>
-                        </div>
-                        <ul id="utilities-list">
-                           
-                        </ul>
+                    <ul id="kitchen-list"></ul>
+                  </div>
+              
+                  <!-- Box 2 -->
+                  <div class="grid-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-title">
+                      <img src="new_section_for_listing/admin.gharpayy.in/img/amenities-icons/electric-gear_3520842.png" alt="Utilities Icon" />
+                      <h3>Utilities</h3>
                     </div>
-        
-                    <!-- Box 3 -->
-                    <div class="grid-box full-width">
-                        <div class="icon-title" style="width: 100%;">
-                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\/meditation_6911426.png" alt="Comfort Icon" />
-                            <h3>Comfort</h3>
-                        </div>
-                        <ul id="comfort-list">
-                            
-                        </ul>
+                    <ul id="utilities-list"></ul>
+                  </div>
+              
+                  <!-- Box 3 (Full Width) -->
+                  <div class="grid-box full-width" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-title" style="width: 100%;">
+                      <img src="new_section_for_listing/admin.gharpayy.in/img/amenities-icons/meditation_6911426.png" alt="Comfort Icon" />
+                      <h3>Comfort</h3>
                     </div>
-        
-                    <!-- Box 4 -->
-        
-        
-                    <div class="grid-box">
-                        <div class="icon-title">
-                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\mop_7842219.png" alt="Security Icon" />
-                            <h3>Facilities</h3>
-                        </div>
-                        <ul id="facilities-list">
-                           
-                        </ul>
+                    <ul id="comfort-list"></ul>
+                  </div>
+              
+                  <!-- Box 4 -->
+                  <div class="grid-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon-title">
+                      <img src="new_section_for_listing/admin.gharpayy.in/img/amenities-icons/mop_7842219.png" alt="Facilities Icon" />
+                      <h3>Facilities</h3>
                     </div>
-        
-                    <div class="grid-box">
-                        <div class="icon-title">
-                            <img src="new_section_for_listing\admin.gharpayy.in\img\amenities-icons\cctv_1367174.png" alt="Security Icon" />
-                            <h3>Security</h3>
-                        </div>
-                        <ul id="security-list">
-                            
-                        </ul>
+                    <ul id="facilities-list"></ul>
+                  </div>
+              
+                  <!-- Box 5 -->
+                  <div class="grid-box" data-aos="fade-up" data-aos-delay="500">
+                    <div class="icon-title">
+                      <img src="https://cdn-icons-png.flaticon.com/512/10682/10682263.png" alt="Security Icon" />
+                      <h3>Security</h3>
                     </div>
+                    <ul id="security-list"></ul>
+                  </div>
+              
                 </div>
-            </section>
+              </section>
+              
 
             <style>
         
@@ -1522,10 +1516,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 .amenities {
     padding: 20px;
-    padding-top: 20px;
+    padding-top: 50px;
     width: 100%;
+    background-color: #f4c024;
+    padding-bottom: 80px;
 }
-
 /* Grid Container */
 .grid-container-2 {
     display: grid;
@@ -1540,9 +1535,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     border-top-left-radius: 45px;
     padding: 20px;
     text-align: center;
-    background-color: #fff;
+    background-color: #F0EAD6;
+    margin-top: 30px;
 }
-
 /* Full-width card (Comfort) */
 .full-width {
     grid-column: span 2; /* Makes it take the full row */
@@ -2152,7 +2147,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <p class="wizard-words">
                         Just tap the button below and send a simple "Hello" on WhatsApp to get started.
                     </p>
-                    <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-btn">WhatsApp Now</a>
+                    <a href="https://wa.me/918307396042" class="whatsapp-btn">WhatsApp Now</a>
                 </div>
                 <div class="magic-box">
                     <h3 class="power-digit">2</h3>
@@ -2497,7 +2492,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             </form>
                         </div>
                     </div>
-                    <div class="col-md-4 offset-md-1 mt-xs-50 ">
+                    <!-- <div class="col-md-4 offset-md-1 mt-xs-50 ">
                         <div class="icon-block-1 mb-5"> <i class="fas fa-map-marker-alt"></i>
                             <h6>Office Address</h6>
                             <span>BANGALORE, INDIA</span>
@@ -2545,7 +2540,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -2734,10 +2729,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <div class="footer-widget quick-link">
                             <h4 class="widget-title down-line-left text-white">Quick Links</h4>
                             <ul>
-                                <li><a href="index-2.html">- Home</a></li>
+                                <li><a href="index_old.html">- Home</a></li>
                                 <li><a href="about.html">- About Us</a></li>
-                                <li><a href="#amenities">- Amenities</a></li>
-                                <li><a href="#contact">- Contact Us</a></li>
+                                <li><a href="amenities.html">- Amenities</a></li>
+                                <li><a href="contact.html">- Contact Us</a></li>
                                 <li> <a href="gurugram/index.html">- GharPayy-GURUGRAM</a> </li>
                                 <!-- <li><a href="#">- Photo Gallery</a></li>
                             <li><a href="#">- Terms and Conditions</a></li>
@@ -2918,6 +2913,11 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
         gtag('config', 'G-7PGP143VEJ');
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
 </body>
 
 

@@ -2632,9 +2632,14 @@ a.btn-scroll b {
 
 /* Feature Box */
 .unique-feature-item {
-    padding: 10px;
+	margin-top: 20px;
+
+    padding: 20px;
     transition: transform 0.3s ease;
-	text-align: left;
+    text-align: left;
+    background-color: #F0EAD6;
+    border-radius: 1.2em;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .unique-feature-item:hover {
@@ -2644,7 +2649,7 @@ a.btn-scroll b {
 /* Icons */
 .material-icons {
     font-size: 40px;
-    color: #000000;
+    color:#424141 ;
     margin-bottom: 10px;
 }
 
@@ -2653,8 +2658,12 @@ a.btn-scroll b {
 	font-family: 'Montserrat';
     font-size: 20px;
     font-weight: bold;
-    color: #000000 !important;
+    color: #424141 !important;
     margin-bottom: 5px;
+}
+
+.unique-feature-item p{
+	color: #424141 !important;
 }
 
 /* Responsive Design */
@@ -2698,7 +2707,7 @@ a.btn-scroll b {
     padding-bottom: 80px;
     padding-top: 80px;
     border-radius: 20px;
-    background-color: #0943a0b5 !important;}
+    background-color: #0943a06b !important}
 
 
 /*============================================
