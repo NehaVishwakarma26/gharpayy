@@ -448,6 +448,7 @@ h6,
 
     .nebula_text_box {
         padding: 2rem;
+		text-align: left;
     }
 
     .stellar_heading {
@@ -2633,6 +2634,8 @@ a.btn-scroll b {
 @media (max-width: 768px) {
 	.mobile-align-left {
 	  text-align: left !important;
+	  padding-left: 1rem;
+    
 	}
   }
   
