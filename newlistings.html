@@ -628,7 +628,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     document.querySelectorAll(".swiper").forEach(swiperContainer => {
         new Swiper(swiperContainer, {
             loop: true,
-            autoplay: { delay: 3000 },
+            autoplay: { delay: 6000 },
             navigation: {
                 nextEl: swiperContainer.querySelector(".swiper-button-next"),
                 prevEl: swiperContainer.querySelector(".swiper-button-prev"),
@@ -2736,6 +2736,88 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
 
         </div>
+
+        <div id="imageZoomModal" class="image-zoom-modal">
+            <span class="close-zoom">&times;</span>
+            <img class="zoomed-image" id="zoomedImage" src="">
+          </div>
+          
+          <style>
+            /* Image zoom modal styles */
+            .image-zoom-modal {
+              display: none;
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.9);
+              z-index: 1000;
+              cursor: zoom-out;
+            }
+            
+            .zoomed-image {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              max-width: 90%;
+              max-height: 90%;
+              object-fit: contain;
+            }
+            
+            .close-zoom {
+              position: absolute;
+              top: 20px;
+              right: 30px;
+              color: white;
+              font-size: 40px;
+              font-weight: bold;
+              cursor: pointer;
+            }
+            
+            .swiper-slide img {
+              cursor: zoom-in;
+            }
+          </style>
+          
+          <script>
+            // Click to zoom functionality
+            document.addEventListener('DOMContentLoaded', function() {
+              // Get the modal
+              const modal = document.getElementById('imageZoomModal');
+              const modalImg = document.getElementById('zoomedImage');
+              const closeBtn = document.querySelector('.close-zoom');
+              
+              // Add click event to all property images
+              document.querySelectorAll('.swiper-slide img').forEach(img => {
+                img.addEventListener('click', function() {
+                  modal.style.display = 'block';
+                  modalImg.src = this.src;
+                });
+              });
+              
+              // Close modal when X is clicked
+              closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+              });
+              
+              // Close modal when clicking outside the image
+              modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                  modal.style.display = 'none';
+                }
+              });
+              
+              // Close modal with ESC key
+              document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                  modal.style.display = 'none';
+                }
+              });
+            });
+          </script>
+
     </section>
   
   
