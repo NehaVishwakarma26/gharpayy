@@ -543,7 +543,131 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   </div>
   
   
-  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialize all swipers on page
+      document.querySelectorAll(".swiper").forEach(swiperContainer => {
+        new Swiper(swiperContainer, {
+          loop: true,
+          autoplay: { delay: 6000 },
+          navigation: {
+            nextEl: swiperContainer.querySelector(".swiper-button-next"),
+            prevEl: swiperContainer.querySelector(".swiper-button-prev"),
+          },
+          pagination: {
+            el: swiperContainer.querySelector(".swiper-pagination"),
+            clickable: true
+          }
+        });
+      });
+    
+      // Create modal swiper container
+      const modal = document.createElement('div');
+      modal.className = 'modal-swiper-container';
+      modal.id = 'fullscreenModal';
+      modal.innerHTML = `
+        <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
+        <div class="swiper modal-swiper" id="fullscreenSwiper">
+          <div class="swiper-wrapper" id="fullscreenWrapper"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    
+      let modalSwiper;
+    
+      // Image click = open modal zoom slider
+      document.querySelectorAll(".image-container .swiper-slide img").forEach((img, index) => {
+        img.addEventListener("click", () => {
+          const swiperSlides = img.closest(".swiper-wrapper").querySelectorAll(".swiper-slide img");
+          const wrapper = document.getElementById("fullscreenWrapper");
+          wrapper.innerHTML = "";
+    
+          swiperSlides.forEach(slideImg => {
+            const src = slideImg.src;
+            wrapper.innerHTML += `
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="${src}" class="modal-image" />
+                </div>
+              </div>`;
+          });
+    
+          modal.classList.add("active");
+    
+          // Wait a bit to ensure modal DOM is updated before initializing Swiper
+          setTimeout(() => {
+            if (modalSwiper) modalSwiper.destroy(true, true);
+    
+            modalSwiper = new Swiper("#fullscreenSwiper", {
+              initialSlide: index,
+              loop: true,
+              zoom: true,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              }
+            });
+          }, 100);
+        });
+      });
+    });
+    </script>
+    
+
+<style>
+    .modal-swiper-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-swiper-container.active {
+        display: flex;
+    }
+    
+    .modal-swiper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .modal-swiper .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-swiper .modal-image {
+        max-width: 90vw;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    
+    .close-modal {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10001;
+    }
+    </style>
+    
   
   
      <section  class="premium-features-section"  style=" background-color: #FAF0E6;  width: 100% !important; padding: 20px 0px !important;">
@@ -557,140 +681,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       
         <div class="listings-container">
           
-            
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  // Initialize all swipers on page
-                  document.querySelectorAll(".swiper").forEach(swiperContainer => {
-                    new Swiper(swiperContainer, {
-                      loop: true,
-                      autoplay: { delay: 6000 },
-                      navigation: {
-                        nextEl: swiperContainer.querySelector(".swiper-button-next"),
-                        prevEl: swiperContainer.querySelector(".swiper-button-prev"),
-                      },
-                      pagination: {
-                        el: swiperContainer.querySelector(".swiper-pagination"),
-                        clickable: true
-                      }
-                    });
-                  });
-                
-                  // Create modal swiper container
-                  const modal = document.createElement('div');
-                  modal.className = 'modal-swiper-container';
-                  modal.id = 'fullscreenModal';
-                  modal.innerHTML = `
-                    <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
-                    <div class="swiper modal-swiper" id="fullscreenSwiper">
-                      <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                  `;
-                  document.body.appendChild(modal);
-                
-                  let modalSwiper;
-                
-                  // Image click = open modal zoom slider
-                  document.querySelectorAll(".image-container .swiper-slide img").forEach((img, index) => {
-                    img.addEventListener("click", () => {
-                      const swiperSlides = img.closest(".swiper-wrapper").querySelectorAll(".swiper-slide img");
-                      const wrapper = document.getElementById("fullscreenWrapper");
-                      wrapper.innerHTML = "";
-                
-                      swiperSlides.forEach(slideImg => {
-                        const src = slideImg.src;
-                        wrapper.innerHTML += `
-                          <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                              <img src="${src}" class="modal-image" />
-                            </div>
-                          </div>`;
-                      });
-                
-                      modal.classList.add("active");
-                
-                      // Wait a bit to ensure modal DOM is updated before initializing Swiper
-                      setTimeout(() => {
-                        if (modalSwiper) modalSwiper.destroy(true, true);
-                
-                        modalSwiper = new Swiper("#fullscreenSwiper", {
-                          initialSlide: index,
-                          loop: true,
-                          zoom: true,
-                          navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                          },
-                          pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                          }
-                        });
-                      }, 100);
-                    });
-                  });
-                });
-                </script>
-                
-                
-                
-            
-<!-- snowy luxe-->
-
-          
-            
-            <style>
-                .modal-swiper-container {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background: rgba(0, 0, 0, 0.95);
-                    z-index: 9999;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .modal-swiper-container.active {
-                    display: flex;
-                }
-                
-                .modal-swiper {
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .modal-swiper .swiper-slide {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .modal-swiper .modal-image {
-                    max-width: 90vw;
-                    max-height: 80vh;
-                    object-fit: contain;
-                    border-radius: 10px;
-                }
-                
-                .close-modal {
-                    position: absolute;
-                    top: 20px;
-                    right: 30px;
-                    color: #fff;
-                    font-size: 2rem;
-                    cursor: pointer;
-                    z-index: 10001;
-                }
-                </style>
-                
-
-         
+             
        
   
                 <div class="listing-card" id="listing1">
@@ -795,13 +786,14 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
     </section>
   
+   
     <section  class="premium-features-section"  style=" background-color: #FAF0E6;  width: 100% !important; padding: 20px 0px !important;">
         <div class="text-center mb-4">
             <h2 class="main-title">Whitefield</h2>
             <p class="text-muted mobile-align-left">Minutes from EPIP Zone, cafes, and coworking hubs. The startup crowd thrives here.
-
-
-
+    
+    
+    
             </p>
         </div>
       
@@ -812,7 +804,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             
                 <div class="image-container swiper">
                     <div class="gharpayy-tag">Gharpayy Classics</div>
-
+    
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/newlistings/flatwala/1.png" alt="Property Image 1"></div>
                         <div class="swiper-slide"><img src="img/newlistings/flatwala/2.png" alt="Property Image 2"></div>
@@ -834,13 +826,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <div class="location">
                         <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
                     </div>
-
+    
                     <div class="location">
                         <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                     </div>
                     <div class="price">
                         <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-
+    
                     </div>
                     <div class="whatsapp-button">
                         <a href="https://wa.me/917988114576" target="_blank">
@@ -849,12 +841,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
                 </div>
             </div>
-
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
                     <div class="gharpayy-tag">Gharpayy Classics</div>
-
+    
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="img/newlistings/itp/1.png" alt="Property Image 1"></div>
                         <div class="swiper-slide"><img src="img/newlistings/itp/2.png" alt="Property Image 2"></div>
@@ -876,13 +868,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     <div class="location">
                         <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
                     </div>
-
+    
                     <div class="location">
                         <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
                     </div>
                     <div class="price">
                         <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
-
+    
                     </div>
                     <div class="whatsapp-button">
                         <a href="https://wa.me/917988114576" target="_blank">
@@ -891,7 +883,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                     </div>
                 </div>
             </div>
-
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
@@ -936,8 +928,8 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               
     
             </div>
-
-
+    
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
@@ -982,7 +974,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               
     
             </div>
-
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
@@ -1027,7 +1019,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               
     
             </div>
-
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
@@ -1117,7 +1109,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               
             
             </div>
-
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
@@ -1162,7 +1154,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               
             
             </div>
-
+    
             <div class="listing-card" id="listing1">
             
                 <div class="image-container swiper">
@@ -1208,299 +1200,172 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             
             </div>
             
-
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  // Initialize all swipers on page
-                  document.querySelectorAll(".swiper").forEach(swiperContainer => {
-                    new Swiper(swiperContainer, {
-                      loop: true,
-                      autoplay: { delay: 6000 },
-                      navigation: {
-                        nextEl: swiperContainer.querySelector(".swiper-button-next"),
-                        prevEl: swiperContainer.querySelector(".swiper-button-prev"),
-                      },
-                      pagination: {
-                        el: swiperContainer.querySelector(".swiper-pagination"),
-                        clickable: true
-                      }
-                    });
-                  });
+    
+         
                 
-                  // Create modal swiper container
-                  const modal = document.createElement('div');
-                  modal.className = 'modal-swiper-container';
-                  modal.id = 'fullscreenModal';
-                  modal.innerHTML = `
-                    <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
-                    <div class="swiper modal-swiper" id="fullscreenSwiper">
-                      <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-pagination"></div>
-                    </div>
-                  `;
-                  document.body.appendChild(modal);
-                
-                  let modalSwiper;
-                
-                  // Image click = open modal zoom slider
-                  document.querySelectorAll(".image-container .swiper-slide img").forEach((img, index) => {
-                    img.addEventListener("click", () => {
-                      const swiperSlides = img.closest(".swiper-wrapper").querySelectorAll(".swiper-slide img");
-                      const wrapper = document.getElementById("fullscreenWrapper");
-                      wrapper.innerHTML = "";
-                
-                      swiperSlides.forEach(slideImg => {
-                        const src = slideImg.src;
-                        wrapper.innerHTML += `
-                          <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                              <img src="${src}" class="modal-image" />
-                            </div>
-                          </div>`;
-                      });
-                
-                      modal.classList.add("active");
-                
-                      // Wait a bit to ensure modal DOM is updated before initializing Swiper
-                      setTimeout(() => {
-                        if (modalSwiper) modalSwiper.destroy(true, true);
-                
-                        modalSwiper = new Swiper("#fullscreenSwiper", {
-                          initialSlide: index,
-                          loop: true,
-                          zoom: true,
-                          navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                          },
-                          pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                          }
-                        });
-                      }, 100);
-                    });
-                  });
-                });
-                </script>
-                
-                
-                
-            
-<!-- snowy luxe-->
-
-          
-            
-            <style>
-                .modal-swiper-container {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background: rgba(0, 0, 0, 0.95);
-                    z-index: 9999;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .modal-swiper-container.active {
-                    display: flex;
-                }
-                
-                .modal-swiper {
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .modal-swiper .swiper-slide {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .modal-swiper .modal-image {
-                    max-width: 90vw;
-                    max-height: 80vh;
-                    object-fit: contain;
-                    border-radius: 10px;
-                }
-                
-                .close-modal {
-                    position: absolute;
-                    top: 20px;
-                    right: 30px;
-                    color: #fff;
-                    font-size: 2rem;
-                    cursor: pointer;
-                    z-index: 10001;
-                }
-                </style>
-                
-
+    
         </div>
-
+    
        
-
+    
     </section>
-  
-  
-
+    
     <section  class="premium-features-section"  style=" background-color: #FAF0E6;  width: 100% !important; padding: 20px 0px !important;">
         <div class="text-center mb-4">
             <h2 class="main-title">Mahadevapura / ITPL</h2>
             <p class="text-muted mobile-align-left">Right in the IT nucleus—Amazon, Samsung, GE, and more. If you work in tech, this is your turf.
-
-
-
-
+    
+    
+    
+    
             </p>
         </div>
       
       
         <div class="listings-container">
-          
+            <div class="listing-card" id="listing1">
             
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  // Initialize all swipers on page
-                  document.querySelectorAll(".swiper").forEach(swiperContainer => {
-                    new Swiper(swiperContainer, {
-                      loop: true,
-                      autoplay: { delay: 6000 },
-                      navigation: {
-                        nextEl: swiperContainer.querySelector(".swiper-button-next"),
-                        prevEl: swiperContainer.querySelector(".swiper-button-prev"),
-                      },
-                      pagination: {
-                        el: swiperContainer.querySelector(".swiper-pagination"),
-                        clickable: true
-                      }
-                    });
-                  });
-                
-                  // Create modal swiper container
-                  const modal = document.createElement('div');
-                  modal.className = 'modal-swiper-container';
-                  modal.id = 'fullscreenModal';
-                  modal.innerHTML = `
-                    <div class="close-modal" onclick="document.getElementById('fullscreenModal').classList.remove('active')">×</div>
-                    <div class="swiper modal-swiper" id="fullscreenSwiper">
-                      <div class="swiper-wrapper" id="fullscreenWrapper"></div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                      <div class="swiper-pagination"></div>
+                <div class="image-container swiper">
+                    <div class="gharpayy-tag">Gharpayy Classics</div>
+    
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/newlisting-2/esteem/1.png" alt="Property Image 1"></div>
+                        <div class="swiper-slide"><img src="img/newlisting-2/esteem/2.png" alt="Property Image 2"></div>
+                        <div class="swiper-slide"><img src="img/newlisting-2/esteem/3.png" alt="Property Image 3"></div>
                     </div>
-                  `;
-                  document.body.appendChild(modal);
-                
-                  let modalSwiper;
-                
-                  // Image click = open modal zoom slider
-                  document.querySelectorAll(".image-container .swiper-slide img").forEach((img, index) => {
-                    img.addEventListener("click", () => {
-                      const swiperSlides = img.closest(".swiper-wrapper").querySelectorAll(".swiper-slide img");
-                      const wrapper = document.getElementById("fullscreenWrapper");
-                      wrapper.innerHTML = "";
-                
-                      swiperSlides.forEach(slideImg => {
-                        const src = slideImg.src;
-                        wrapper.innerHTML += `
-                          <div class="swiper-slide">
-                            <div class="swiper-zoom-container">
-                              <img src="${src}" class="modal-image" />
-                            </div>
-                          </div>`;
-                      });
-                
-                      modal.classList.add("active");
-                
-                      // Wait a bit to ensure modal DOM is updated before initializing Swiper
-                      setTimeout(() => {
-                        if (modalSwiper) modalSwiper.destroy(true, true);
-                
-                        modalSwiper = new Swiper("#fullscreenSwiper", {
-                          initialSlide: index,
-                          loop: true,
-                          zoom: true,
-                          navigation: {
-                            nextEl: ".swiper-button-next",
-                            prevEl: ".swiper-button-prev",
-                          },
-                          pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                          }
-                        });
-                      }, 100);
-                    });
-                  });
-                });
-                </script>
-                
-                
-                
+                    <!-- Sleek Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination"></div>
+                </div>
             
-<!-- snowy luxe-->
-
-          
+                <div class="listing-info">
+                    <h3>GG ESTEEM COED</h3>
+                    <p>CLASSICS (₹17K-26K) – Secure, stylish, and premium PGs</p>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> Mahadevpura
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
+                    </div>
+        
+                    <div class="location">
+                        <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                    </div>
+                    <div class="price">
+                        <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+        
+                    </div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/917988114576" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+    
+              
+    
+            </div>
+    
+            <div class="listing-card" id="listing1">
             
-            <style>
-                .modal-swiper-container {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background: rgba(0, 0, 0, 0.95);
-                    z-index: 9999;
-                    display: none;
-                    justify-content: center;
-                    align-items: center;
-                }
+                <div class="image-container swiper">
+                    <div class="gharpayy-tag">Gharpayy Classics</div>
+    
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/newlisting-2/phix/1.png" alt="Property Image 1"></div>
+                        <div class="swiper-slide"><img src="img/newlisting-2/phix/2.png" alt="Property Image 2"></div>
+                        <div class="swiper-slide"><img src="img/newlisting-2/phix/3.png" alt="Property Image 3"></div>
+                    </div>
+                    <!-- Sleek Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            
+                <div class="listing-info">
+                    <h3>GG PHIX BGM</h3>
+                    <p>CLASSICS (₹17K-26K) – Secure, stylish, and premium PGs</p>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> Mahadevpura
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
+                    </div>
+        
+                    <div class="location">
+                        <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                    </div>
+                    <div class="price">
+                        <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+        
+                    </div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/917988114576" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+    
+              
+    
+            </div>
+    
+            <div class="listing-card" id="listing1">
+            
+                <div class="image-container swiper">
+                    <div class="gharpayy-tag">Gharpayy Classics</div>
+            
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/newlisting-3/kmhalli/1.png" alt="Property Image 1"></div>
+                        <div class="swiper-slide"><img src="img/newlisting-3/kmhalli/2.png" alt="Property Image 2"></div>
+                        <div class="swiper-slide"><img src="img/newlisting-3/kmhalli/3.png" alt="Property Image 3"></div>
+                    </div>
+                    <!-- Sleek Navigation Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            
+                <div class="listing-info">
+                    <h3>GG KMHALLI COED</h3>
+                    <p>CLASSICS (₹17K-26K) – Secure, stylish, and premium PGs</p>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i> Marathahalli, Mahadevapura
+                    </div>
+                    <div class="location">
+                        <i class="fas fa-star"></i> Peak Spot | Meals Too | Always Clean
+                    </div>
+            
+                    <div class="location">
+                        <i class="fas fa-door-closed"></i> <span>Private/Shared Stay</span>
+                    </div>
+                    <div class="price">
+                        <span class="discounted-price">SAVE EXTRA 1K OFF ON PREBOOKING</span>
+            
+                    </div>
+                    <div class="whatsapp-button">
+                        <a href="https://wa.me/917988114576" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            
+              
+            
+            </div>
+        
                 
-                .modal-swiper-container.active {
-                    display: flex;
-                }
-                
-                .modal-swiper {
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .modal-swiper .swiper-slide {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                
-                .modal-swiper .modal-image {
-                    max-width: 90vw;
-                    max-height: 80vh;
-                    object-fit: contain;
-                    border-radius: 10px;
-                }
-                
-                .close-modal {
-                    position: absolute;
-                    top: 20px;
-                    right: 30px;
-                    color: #fff;
-                    font-size: 2rem;
-                    cursor: pointer;
-                    z-index: 10001;
-                }
-                </style>
-                
-
+    
         </div>
-
+    
        
-
+    
     </section>
+    
   
    
     
