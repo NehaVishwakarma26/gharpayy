@@ -2634,7 +2634,6 @@ a.btn-scroll b {
 @media (max-width: 768px) {
 	.mobile-align-left {
 	  text-align: left !important;
-	  padding-left: 1rem;
     
 	}
   }
@@ -7253,7 +7252,8 @@ No media query for `xs` since this is the default in Bootstrap*/
 	}
 
 	.subtext {
-		letter-spacing: 4px
+		letter-spacing: 4px;
+		text-align: left !important;
 	}
 
 	.left-right-line::before,
