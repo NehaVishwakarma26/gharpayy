@@ -2381,6 +2381,126 @@ a.btn-scroll b {
     }
 }
 
+
+#coliving-section {
+	padding: 60px 100px;
+	background-color: #fff;
+	font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .coliving-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 1200px;
+	margin: auto;
+	gap: 40px;
+  }
+  
+  .coliving-left {
+	flex: 1 1 250px;
+  }
+  
+  .coliving-subtitle {
+	font-size: 1.5rem;
+	color: #555;
+	margin: 0;
+  }
+  
+  .coliving-title {
+	font-size: 2.5rem;
+	font-weight: 800;
+	margin: 10px 0 0;
+	color: #333;
+  }
+  
+  .coliving-middle {
+	flex: 1 1 250px;
+  }
+  
+  .coliving-features {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  .coliving-features li {
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+	margin-bottom: 16px;
+	color: #444;
+}
+
+.coliving-features i {
+	width: 24px;           /* 🔸 Add this */
+	min-width: 24px;       /* 🔸 Ensure it doesn’t shrink */
+	text-align: center;    /* 🔸 Center icon inside the box */
+	font-size: 20px;
+	margin-right: 12px;
+}
+
+  
+  .coliving-right {
+	flex: 1 1 300px;
+	text-align: center;
+  }
+  
+  .coliving-image {
+	width: 100%;
+	max-width: 400px;
+	border-radius: 40px 0 0 40px;
+	object-fit: cover;
+  }
+  .icon-furnished {
+	color: #d47a86; /* darker pink */
+  }
+  
+  .icon-housekeeping {
+	color: #7bbfa6; /* darker mint */
+  }
+  
+  .icon-contracts {
+	color: #ffb347; /* darker pastel orange */
+  }
+  
+  .icon-wifi {
+	color: #6a9eda; /* deeper pastel blue */
+  }
+  
+  .icon-maintenance {
+	color: #b498b8; /* deeper lavender */
+  }
+  
+  .icon-events {
+	color: #f4c542; /* richer lemon */
+  }
+  
+
+  @media (max-width: 768px) {
+	.coliving-container {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+  
+	.coliving-title {
+	  font-size: 2rem;
+	}
+  
+	.coliving-right {
+	  width: 100%;
+	}
+	.coliving-left{
+		flex: 1 1 20px;
+	}
+
+	#coliving-section {
+		padding: 60px 20px;
+	}
+  }
+  
+
 /* carousel section end */
 
 
