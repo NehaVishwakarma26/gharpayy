@@ -2381,6 +2381,27 @@ a.btn-scroll b {
     }
 }
 
+.count-num{
+	font-family: 'Montserrat';
+}
+  
+
+  .stat-card {
+	border-radius: 2rem;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+	transition: transform 0.3s ease;
+	margin-bottom: 1em;
+  }
+  .stat-card:hover {
+	transform: translateY(-6px);
+  }
+  
+
+  @media (max-width: 768px) {
+	.row.g-4 {
+	  gap: 1.5rem; /* Adds vertical and horizontal gap between columns */
+	}
+  }
 
 #coliving-section {
 	padding: 60px 100px;
@@ -2548,7 +2569,7 @@ a.btn-scroll b {
     flex: 1;
     min-width: 280px; /* Ensures boxes don't shrink too much */
     padding: 25px;
-    background: #0943a066;
+    background: #f4c024;
     border-radius: 12px;
     box-shadow: 6px 6px 0 -2px #000;
     text-align: left;
@@ -2589,7 +2610,7 @@ a.btn-scroll b {
     display: inline-block;
     margin-top: 12px;
     padding: 12px 22px;
-    background: var(--primary-theme-color);
+    background: white;
     color: #000000;
     text-decoration: none;
     border-radius: 6px;
