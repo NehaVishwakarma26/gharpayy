@@ -2605,6 +2605,151 @@ a.btn-scroll b {
     margin-top: 12px;
 }
 
+/* april section start */
+
+#gp-moveins-alert {
+    width: 100%;
+    /* margin: 80px auto; */
+    background: #F0EAD6;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 50px 30px;
+    display: grid
+;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+    @media (min-width: 768px) {
+      #gp-moveins-alert {
+        grid-template-columns: 1fr 1fr;
+        padding: 70px 60px;
+      }
+    }
+
+    .gp-movein-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .gp-movein-info h2 {
+      font-size: 2.3rem;
+      color: #263238;
+      margin-bottom: 10px;
+    }
+
+    .gp-movein-info p {
+      font-size: 1.1rem;
+      color: #546e7a;
+    }
+
+    .gp-movein-benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .gp-movein-benefits {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gp-benefit-card {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-left: 6px solid #0943A0;
+    }
+
+    .gp-benefit-icon {
+      font-size: 1.4rem;
+      color: #0943A0;
+    }
+
+    .gp-benefit-text {
+      font-weight: 500;
+      color: #37474f;
+    }
+
+
+	
+#gp-resident-spotlight {
+    width: 100%;
+    /* margin: 60px auto; */
+    padding: 40px;
+    background-color:#F4C024 !important;
+    /* box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06); */
+    display: flex
+;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    #gp-resident-spotlight {
+        flex-direction: row;
+        align-items: center;
+        padding: 60px 80px;
+        gap: 200px;
+        padding-left: 8rem !important;
+    }
+}
+    .gp-title-bar {
+      flex: 1;
+    }
+
+    .gp-title-bar h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      border-left: 6px solid #ff5a5f;
+      padding-left: 16px;
+    }
+
+    .gp-content {
+      flex: 2;
+    }
+
+    .gp-highlight-list {
+      list-style: none;
+      line-height: 1.9;
+      font-size: 1.1rem;
+      padding-left: 0;
+      margin-bottom: 30px;
+    }
+
+    .gp-highlight-list li {
+      padding-left: 26px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .gp-highlight-list li::before {
+      content: "👥";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .gp-final-note {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .gp-final-note span {
+      color: #ff5a5f;
+    }
+
+/* april section end */
+
 /* WhatsApp Button */
 .whatsapp-btn {
     display: inline-block;
