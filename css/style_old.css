@@ -4685,10 +4685,10 @@ hero section
     text-align: left;
     margin-bottom: 20px;
     width: 340px;
-	height: 350px;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgb(245, 244, 228);
+    height: 350px;
+    /* border-width: 4px; */
+    /* border-style: solid; */
+    border-left: 4px solid #0943A0;
     border-image: initial;
     padding: 20px;
     border-radius: 40px 15px 15px;
@@ -4705,12 +4705,12 @@ hero section
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 480px) {
-	.service-item-2 {
-        width: 100%;
+    .service-item-2 {
+        width: 90%;
         height: auto;
         padding: 30px;
         border-radius: 20px 10px 10px;
-		margin-left: 1em;
+        margin-left: 1em;
     }
 }
 
@@ -5362,7 +5362,7 @@ ol {
     text-align: center;
     padding: 20px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 	font-family: 'Larken Black';
 }
 
@@ -5374,11 +5374,13 @@ ol {
 }
 
 .video_title_box_extreme_333 h3 {
-    font-size: 1.5rem;
-    color: #555; /* Softer gray for subtle contrast */
+    font-size: 1.1rem;
+    color: #555;
     font-weight: 400;
-    margin-top: 5px;
-    opacity: 0.9;
+    /* margin-top: 5px; */
+    /* opacity: 0.9; */
+    color: #546e7a !important;
+    font-family: 'Montserrat';
 }
 /* Swiping Slider */
 .video_slider_wrapper_swipe_555 {
@@ -7701,7 +7703,7 @@ a.btn-scroll b {
 .coliving-places {
 	padding-top: 1px !important;
 	font-family: sans-serif;
-	background-color: #0943a0;
+	background-color: #F1BE24;
 	color: white;
 	padding: 50px 0px 50px 0px;
 }
