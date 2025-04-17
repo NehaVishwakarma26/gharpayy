@@ -239,21 +239,43 @@
         <div class="overlay-switcher-close"></div>
 
         <main>
+          <style>
+            .yellow-bg {
+  background-color: #F4C024 !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* ensures it's behind content */
+}
+
+@font-face {
+    font-family: 'Larken Black';
+    src: url('larken-font/Larken Serif Trial/LarkenDEMO-Black.otf') format('opentype');
+    font-style: normal;
+}
+
+.features-area .feature-box .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #0943a0 !important;
+}
+          </style>
 
           <!-- hero area start  -->
           <section class="hero-area">
             <div class="container large">
               <div class="hero-area-inner">
                 <div class="section-content">
-                  <div class="bg">
-                    <img src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-52.webp" alt="image">
-                  </div>
+                  <div class="bg yellow-bg"></div>
                   <div class="section-title-wrapper">
+                
                     <div class="subtitle-wrapper">
                       <span class="section-subtitle has-right-line">Find your ideal stay</span>
                     </div>
                     <div class="title-wrapper">
-                      <h1 class="section-title has_text_move_anim">
+                      <h1 class="section-title has_text_move_anim" style="color: #0943a0 !important;">
                       Gharpayy Student Living<br>  – Your Perfect PG in Bangalore</h1>
                     </div>
                   </div>
@@ -351,7 +373,7 @@
                       <div class="section-header">
                         <div class="section-title-wrapper">
                           <div class="title-wrapper">
-                            <h2 class="section-title has_text_move_anim" >Why <span>Gharpayy?</span>
+                            <h2 class="section-title has_text_move_anim" style="color: #0943a0 !important;" >Why <span>Gharpayy?</span>
     
                             </h2>
                           </div>
@@ -370,10 +392,20 @@
               <!-- project area end  -->
           <!-- clients area end  -->
 
-
+<style>
+  .service-box .number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000 !important;
+    transition: all .5s;
+}
+.content .accomodation h3{
+  color: black;
+}
+</style>
 
              <!-- fun-fact area start  -->
-             <section class="fun-fact-area" style="background-color: #F1E7E7;    margin-top: 4em; padding-bottom: 2em;">
+             <section class="fun-fact-area" style="background-color: #F0EAD6 !important;    margin-top: 4em; padding-bottom: 2em;">
               <div class="container">
                 <div class="fun-fact-area-inner section-spacing-top">
                   <div class="section-header">
@@ -385,7 +417,7 @@
                           <h3 class="section-subtitle mt-3" style="    font-size: 2.2em;
                           line-height: 1em;
                           font-weight: 800;
-                          font-family: 'Kanit';">100% Refund Guarantee – If your admission is not confirmed, get a full refund.
+                          font-family: 'Kanit';color: #0943a0;">100% Refund Guarantee – If your admission is not confirmed, get a full refund.
   
                         </div>
   
@@ -420,8 +452,8 @@
   
 
     <!-- service area start  -->
-    <div class="container large mt-5" style="background-color: #3980ca;margin-top: 0 !important;">
-      <section class="service-area" style="background-color:#3980ca;">
+    <div class="container large mt-5" style="background-color: #F4C024 !important;margin-top: 0 !important;">
+      <section class="service-area" style="background-color:#F4C024 !important;">
         <div class="service-area-inner section-spacing">
           <div class="container">
             <div class="section-header">
@@ -431,7 +463,7 @@
                   <h3 class="section-subtitle mt-3" style="    font-size: 2.2em;
                   line-height: 1em;
                   font-weight: 800;
-                  font-family: 'Kanit'; color: white;"> Looking for <span>Secure</span> Student Accommodation?
+                  font-family: 'Kanit'; color:#0943A0   !important;"> Looking for <span>Secure</span> Student Accommodation?
 
                 </div>
               </div>
@@ -443,8 +475,8 @@
                     <div class="service-box">
                       <h3 class="number" >01</h3>
                       <div class="content accomodation">
-                        <h3 class="title bold-weight" style="color: white !important">Live with Your Friends</h3>
-                        <p class="text" style="color:#d8d8d8 !important;font-weight: 200;">
+                        <h3 class="title bold-weight" style="color: black !important">Live with Your Friends</h3>
+                        <p class="text" style="color:black !important;font-weight: 200;">
                           Rent a private room or a shared space with your besties.
                         </p>
                       </div>
@@ -456,8 +488,8 @@
                     <div class="service-box">
                       <h3 class="number">02</h3>
                       <div class="content accommodation">
-                        <h3 class="title bold-weight"  style="color: white !important">Flexible Rental Terms</h3>
-                        <p class="text" style="color:#d8d8d8 !important;font-weight: 200;">
+                        <h3 class="title bold-weight"  style="color: black !important">Flexible Rental Terms</h3>
+                        <p class="text" style="color:black !important;font-weight: 200;">
                           Stay as little as 3 months with student-friendly contracts.
                         </p>
                       </div>
@@ -469,8 +501,8 @@
                     <div class="service-box">
                       <h3 class="number">03</h3>
                       <div class="content accommodation">
-                        <h3 class="title bold-weight"  style="color: white !important">Move-In Ready</h3>
-                        <p class="text" style="color:#d8d8d8 !important;font-weight: 200;">
+                        <h3 class="title bold-weight"  style="color: black !important">Move-In Ready</h3>
+                        <p class="text" style="color:black !important;font-weight: 200;">
                           Fully furnished rooms with a bed, wardrobe, AC, WiFi, and study desks.
                         </p>
                       </div>
@@ -510,7 +542,7 @@
         <div class="text-wrapper">
           <p class="text has_fade_anim" style="font-weight: 800;
           font-size: 2.2em;
-          line-height: 1em;">We provide hand-picked student PGs near</p>
+          line-height: 1em;color: #0943a0;">We provide hand-picked student PGs near</p>
         </div>
       </div>
       <div class="features-wrapper-box">
