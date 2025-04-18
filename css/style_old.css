@@ -2416,7 +2416,7 @@ a.btn-scroll b {
 	justify-content: space-between;
 	max-width: 1200px;
 	margin: auto;
-	gap: 40px;
+	gap:500px;
   }
   
   .coliving-left {
@@ -2500,10 +2500,14 @@ a.btn-scroll b {
   
 
   @media (max-width: 768px) {
-	.coliving-container {
-	  flex-direction: column;
-	  align-items: flex-start;
-	}
+	
+		.coliving-container {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 30px;
+		}
+	
+	
   
 	.coliving-title {
 	  font-size: 2rem;
@@ -4603,7 +4607,7 @@ hero section
 
 .hero-section {
 	width: 100%;
-    height: 90vh;
+    /* height: 90vh; */
     display: flex;
     align-items: center;
     justify-content: center;
