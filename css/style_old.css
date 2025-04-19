@@ -2391,6 +2391,8 @@ a.btn-scroll b {
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 	transition: transform 0.3s ease;
 	margin-bottom: 1em;
+	background-color: #F0EAD6 !important;
+
   }
   .stat-card:hover {
 	transform: translateY(-6px);
