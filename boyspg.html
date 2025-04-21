@@ -47,52 +47,7 @@
   </div>
 
   <!-- Switcher Area Start -->
-  <div class="switcher__area">
-    <div class="switcher__icon">
-      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
-      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="switcher__items">
-      <div class="switcher__item">
-        <div class="switch__title-wrap">
-          <p class="switcher__title">mode</p>
-        </div>
-        <div class="switcher__btn mode-type wc-col-2">
-          <button class="active" data-mode="light">light</button>
-          <button data-mode="dark">dark</button>
-        </div>
-      </div>
-      <div class="switcher__item">
-        <div class="switch__title-wrap">
-          <p class="switcher__title">Language Support</p>
-        </div>
-        <div class="switcher__btn lang_dir wc-col-2">
-          <button class="active" data-mode="ltr">LTR</button>
-          <button data-mode="rtl">RTL</button>
-        </div>
-      </div>
-      <div class="switcher__item">
-        <div class="switch__title-wrap">
-          <p class="switcher__title">Layout</p>
-        </div>
-        <div class="switcher__btn layout-type wc-col-2">
-          <button class="active" data-mode="full-width">Full Width</button>
-          <button data-mode="box-layout">Box Layout</button>
-        </div>
-      </div>
-      <div class="switcher__item">
-        <div class="switch__title-wrap">
-          <p class="switcher__title">Cursor</p>
-        </div>
-        <div class="switcher__btn">
-          <select name="cursor-style" id="cursor_style">
-            <option value="1">default</option>
-            <option selected value="2">animated</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   <!-- Switcher Area End -->
 
   <!-- offcanvas start  -->
@@ -108,6 +63,59 @@
           </div>
       
         </div>
+        <style>
+          nav.main-menu li.dropdown > span {
+              display: flex
+          ;
+              padding: 10px 15px;
+              line-height: 1.5;
+              text-decoration: none;
+              cursor: pointer;
+              align-items: center;
+          }
+                  /* Dropdown wrapper */
+          .dropdown {
+            position: relative;
+          }
+          
+          /* Hide dropdown by default */
+          .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 10px 0;
+            list-style: none;
+            top: 100%;
+            left: 0;
+            min-width: 150px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+          }
+          
+          /* Show dropdown on hover */
+          .dropdown:hover .dropdown-menu {
+            display: block;
+          }
+          
+          /* Style for dropdown items */
+          .dropdown-menu li a {
+            padding: 10px 15px;
+            display: block;
+            color: #333;
+            text-decoration: none;
+          }
+          
+          .dropdown-menu li a:hover {
+            background-color: #f1f1f1;
+          }
+          
+          .main-menu li {
+              display: flex
+          ;
+          }
+          
+                </style>
+
         <div class="offcanvas-3__menu-wrapper">
           <nav class="nav-menu offcanvas-3__menu">
             <ul>
@@ -115,8 +123,14 @@
               <li><a href="about.html">about</a></li>
               <li><a href="index.html#amenities">amenities</a></li>
               <li><a href="index.html#faqs">faq</a></li>
-              <li><a href="gurugram/index.html">GharPayy-GURUGRAM</a></li>
-             
+              <li class="dropdown" style="display: flex;">
+                <span>Students <span style="font-size: 0.8em;">▼</span></span>
+                <ul class="dropdown-menu">
+                  <li><a href="girlspg.html">Girls PG</a></li>
+                  <li><a href="boyspg.html">Boys PG</a></li>
+                </ul>
+              </li>
+                           
             </ul>
           </nav>
         </div>
@@ -159,8 +173,14 @@
                 <li><a href="about.html"> About Us</a></li>
                 <li><a href="amenities.html"> Amenities</a></li>
   
-                <li><a href="gurugram/index.html"> GharPayy-Gurugram</a></li>
-              </ul>
+                <li class="dropdown" style="display: flex;">
+                  <span>Students <span style="font-size: 0.8em;">▼</span></span>
+                  <ul class="dropdown-menu">
+                    <li><a href="girlspg.html">Girls PG</a></li>
+                    <li><a href="boyspg.html">Boys PG</a></li>
+                  </ul>
+                </li>
+                              </ul>
             </nav>
           </div>
           <div class="header__button">
@@ -229,20 +249,8 @@ z-index: -1; /* ensures it's behind content */
                       data-text="Get started">WhatsApp Now</span><i class="fa-solid fa-angle-right"></i></a>
                   </div>
                   <div class="review-wrapper has_fade_anim" data-delay="1.2" data-on-scroll="0">
-                    <div class="reviews">
-                      <h2 class="rating">4.5</h2>
-                      <span class="review">(6000+ reviews)</span>
-                    </div>
-                    <div class="ratings">
-                      <span class="rating-text">Average Rating</span>
-                      <div class="rating-icons">
-                        <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/star-2.webp" alt="icon">
-                        <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/star-2.webp" alt="icon">
-                        <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/star-2.webp" alt="icon">
-                        <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/star-2.webp" alt="icon">
-                        <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/star-2.webp" alt="icon">
-                      </div>
-                    </div>
+                  
+                 
                   </div>
                 </div>
                 <div class="thumb">
@@ -408,7 +416,7 @@ z-index: -1; /* ensures it's behind content */
                             </div>
                         </div>
                         <div class="text-wrapper">
-                            <p class="text has_fade_anim">Discover thoughtfully designed co-living spaces tailored for students, offering comfort, convenience, and community.</p>
+                            <p class="text has_fade_anim">Discover thoughtfully designed home living spaces tailored for students, offering comfort, convenience, and community.</p>
                         </div>
                         <div class="btn-wrapper has_fade_anim">
                           <a href="https://wa.me/918307396042" class="wc-btn wc-btn-primary btn-text-flip"> <span data-text="Learn more">Learn
@@ -561,6 +569,13 @@ z-index: -1; /* ensures it's behind content */
     background: #0943a0;
 }
 </style>
+<style>
+  .features-area .feature-box .content {
+    margin-top: 11px;
+}
+
+</style>
+
 <!-- room types -->
 <section class="features-area mb-5">
   <div class="container">
@@ -568,45 +583,52 @@ z-index: -1; /* ensures it's behind content */
           <div class="section-header">
               <div class="section-title-wrapper">
                   <div class="title-wrapper">
-                    <h2 class="section-title has_text_move_anim" style="color: rgb(9, 67, 160) !important;font-family: Kanit; font-size: 2.2em;">Your Perfect Room Awaits</h2>
+                      <h2 class="section-title has_text_move_anim" style="color: rgb(9, 67, 160) !important; font-family: Kanit; font-size: 2.2em;">
+                          Your Perfect Room Awaits
+                      </h2>
                   </div>
-              </div>
-              <div class="text-wrapper">
-                  <p class="text has_fade_anim">
-                    <!-- Rooms Designed for Student Comfort -->
-                  </p>
               </div>
           </div>
           <div class="features-wrapper-box">
               <div class="features-wrapper">
                   <!-- Feature Box 1 -->
                   <div class="feature-box has_fade_anim" data-fade-from="bottom">
-                      <div class="thumb" style=" padding: 20px; border-radius: 50%;">
-                          <span class="material-icons" style="font-size: 48px; color: #D81B60;">hotel</span> <!-- Pink pastel -->
+                      <div class="thumb" style="padding: 20px; border-radius: 50%;">
+                          <span class="material-icons" style="font-size: 69px; color: #D81B60;">king_bed</span>
                       </div>
                       <div class="content">
                           <h3 class="title">Private & Shared Rooms</h3>
-                          <p class="text">Options for both boys & girls.</p>
+                          <p class="text">Pick from single, double, or triple sharing — all furnished and comfy.</p>
                       </div>
                   </div>
                   <!-- Feature Box 2 -->
                   <div class="feature-box has_fade_anim" data-fade-from="bottom">
                       <div class="thumb" style="padding: 20px; border-radius: 50%;">
-                          <span class="material-icons" style="font-size: 48px; color: #0288D1;">menu_book</span> <!-- Blue pastel -->
+                          <span class="material-icons" style="font-size: 69px; color: #0288D1;">local_library</span>
                       </div>
                       <div class="content">
-                          <h3 class="title">Common Study Areas</h3>
-                          <p class="text">Stay focused on academics.</p>
+                          <h3 class="title">Dedicated Study Zones</h3>
+                          <p class="text">Quiet, focused areas to help you stay on top of your academics.</p>
                       </div>
                   </div>
                   <!-- Feature Box 3 -->
                   <div class="feature-box has_fade_anim" data-fade-from="bottom">
                       <div class="thumb" style="padding: 20px; border-radius: 50%;">
-                          <span class="material-icons" style="font-size: 48px; color: #388E3C;">groups</span> <!-- Green pastel -->
+                          <span class="material-icons" style="font-size: 69px; color: #388E3C;">celebration</span>
                       </div>
                       <div class="content">
-                          <h3 class="title">Community Events</h3>
-                          <p class="text">Meet like-minded students.</p>
+                          <h3 class="title">Fun & Friendly Community</h3>
+                          <p class="text">Events, hangouts, and weekend vibes — all right where you live.</p>
+                      </div>
+                  </div>
+                  <!-- Feature Box 4 -->
+                  <div class="feature-box has_fade_anim" data-fade-from="bottom">
+                      <div class="thumb" style="padding: 20px; border-radius: 50%;">
+                          <span class="material-icons" style="font-size: 69px; color: #7B1FA2;">security</span>
+                      </div>
+                      <div class="content">
+                          <h3 class="title">Safe & Secure Living</h3>
+                          <p class="text">CCTV, biometric entry, and caretakers on-site — so you can rest easy.</p>
                       </div>
                   </div>
               </div>
@@ -643,49 +665,48 @@ z-index: -1; /* ensures it's behind content */
                   <div class="services-wrapper-box">
                     <div class="services-wrapper">
                       <!-- Step 1 -->
-                      <div class="has_fade_anim">
-                        <div class="service-box">
-                          <h3 class="number">01</h3>
-                          <div class="thumb">
-                            <img src="img/girlspg copy/homelyforum/2.png" alt="Virtual Tour image">
-                          </div>
-                          <div class="content">
-                            <h3 class="title">Virtual Tour</h3>
-                            <p class="text">Live walkthrough and Q&A via WhatsApp.</p>
-                            <span class="wc-btn wc-btn-circle"><i class="fa-solid fa-arrow-right"></i></span>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Step 2 -->
-                      <div class="has_fade_anim">
-                        <div class="service-box">
-                          <h3 class="number">02</h3>
-                          <div class="thumb">
-                            <img src="img/girlspg copy/acegirls/3.png" alt="Customize Your Stay image">
-                          </div>
-                          <div class="content">
-                            <h3 class="title">Customize Your Stay</h3>
-                            <p class="text">Pick duration, meal plans, and add‑ons (tutoring, laundry upgrades).</p>
-                            <span class="wc-btn wc-btn-circle"><i class="fa-solid fa-arrow-right"></i></span>
-                          </div>
-                        </div>
-                      </div>
-          
-                      <!-- Step 3 -->
-                      <div class="has_fade_anim">
-                        <div class="service-box">
-                          <h3 class="number">03</h3>
-                          <div class="thumb">
-                            <img src="img/girlspg copy/homelyforum/3.png" alt="Move In Fast image">
-                          </div>
-                          <div class="content">
-                            <h3 class="title">Move In Fast</h3>
-                            <p class="text">Secure with ₹5,000; keys in hand within 48 hours.</p>
-                            <span class="wc-btn wc-btn-circle"><i class="fa-solid fa-arrow-right"></i></span>
-                          </div>
-                        </div>
-                      </div>
+                   <!-- Step 1 -->
+<div class="has_fade_anim">
+  <div class="service-box">
+    <h3 class="number">01</h3>
+    <div class="thumb">
+      <i class="fa-solid fa-video" style="font-size: 48px; color: #0077b6;"></i>
+    </div>
+    <div class="content">
+      <h3 class="title">Virtual Tour</h3>
+      <p class="text">Live walkthrough and Q&A via WhatsApp.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Step 2 -->
+<div class="has_fade_anim">
+  <div class="service-box">
+    <h3 class="number">02</h3>
+    <div class="thumb">
+      <i class="fa-solid fa-sliders" style="font-size: 48px; color: #f57c00;"></i> <!-- already good -->
+    </div>
+    <div class="content">
+      <h3 class="title">Customize Your Stay</h3>
+      <p class="text">Pick duration, meal plans, and add‑ons (tutoring, laundry upgrades).</p>
+    </div>
+  </div>
+</div>
+
+<!-- Step 3 -->
+<div class="has_fade_anim">
+  <div class="service-box">
+    <h3 class="number">03</h3>
+    <div class="thumb">
+      <i class="fa-solid fa-bolt" style="font-size: 48px; color: #43a047;"></i>
+    </div>
+    <div class="content">
+      <h3 class="title">Move In Fast</h3>
+      <p class="text">Secure with ₹5,000; keys in hand within 48 hours.</p>
+    </div>
+  </div>
+</div>
+
           
                     </div>
                   </div>
@@ -1475,63 +1496,83 @@ z-index: -1; /* ensures it's behind content */
 
         </main>
 
-        <!-- footer area start  -->
-        <div class="container large" style="padding: 0;">
-          <footer class="footer-area">
-            <div class="container">
-              <div class="footer-area-inner">
-                <div class="footer-widget-wrapper">
-                  <div class="footer-logo">
-                    <img src="img/boyspg copy/gharpayy_logo2.png" alt="site-logo">
-                  </div>
-                  <p class="info-text">Discover the perfect place to stay that suits your comfort, convenience, and lifestyle.</p>                  <ul class="social-links">
-                  
-                    <li><a href="https://www.instagram.com/gharpayy/?hl=en"><i class="material-icons" style="color: #dfdad2;">camera_alt</i></a></li> <!-- Instagram -->
-                    <li><a href="https://in.linkedin.com/company/gharpayy"><i class="material-icons" style="color: #dfdad2;">business</i></a></li> <!-- LinkedIn -->
-                    <li><a href="https://www.facebook.com/Gharpayy/"><i class="material-icons" style="color: #dfdad2;">facebook</i></a></li> <!-- Facebook -->
-                    
-                  </ul>
-                </div>
-               <!-- Include Material Icons -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-<div class="footer-widget-wrapper">
-    <p class="text" style="margin-bottom: 0.5em;">
-        <i class="material-icons" style="vertical-align: middle; font-size: 20px; color: #dfdad2;">place</i> 
-        Bangalore, India
-    </p>
-    <p class="text" style="margin-bottom: 0.5em;">
-        <i class="material-icons" style="vertical-align: middle; font-size: 20px; color: #dfdad2;">email</i> 
-        <a href="mailto:hey@gharpayy.com">hey@gharpayy.com</a>
-    </p>
-    <p class="text" style="margin-bottom: 0.5em;">
-        <i class="material-icons" style="vertical-align: middle; font-size: 20px; color: #dfdad2;">call</i> 
-        <a href="tel:+917988114576">+91 7988114576</a>
-    </p>
-</div>
-
-                <div class="footer-widget-wrapper">
-                  <h2 class="title">Quick Links</h2>
-                  <ul class="footer-nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="index.html#amenities">Amenities</a></li>
-                    <li><a href="gurugram/index.html">GharPayy-Gurugram</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="copyright-area">
-              <div class="container">
-                <div class="copyright-area-inner">
-                  <div class="copyright-text">
-                    <p class="text">© 2024-25 GharPayy. All Rights Reserved.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </footer>
+        <style>
+          .footer-icons{
+            color: white;
+            border: 1px solid white;
+            border-radius: 50%;
+            padding: 0.4em;
+        }
+        
+        .footer-widget-wrapper p{
+          color: white;
+        }
+        
+        .footer-nav-list li{
+          color: white !important;
+        }
+        
+        .info-text{
+          color: white !important;
+        }
+        </style>
+        
+                <!-- footer area start  -->
+                <div class="container large" style="padding: 0; background-color: #0943a0 !important;">
+                  <footer class="footer-area" style="background-color: #0943a0;">
+                    <div class="container">
+                      <div class="footer-area-inner">
+                        <div class="footer-widget-wrapper">
+                         
+                          <p class="info-text">Discover the perfect place to stay that suits your comfort, convenience, and lifestyle.</p>                  <ul class="social-links">
+                          
+                            <li><a href="https://www.instagram.com/gharpayy/?hl=en"><i class="material-icons footer-icons" style="color: #dfdad2;">camera_alt</i></a></li> <!-- Instagram -->
+                            <li><a href="https://in.linkedin.com/company/gharpayy"><i class="material-icons footer-icons" style="color: #dfdad2;">business</i></a></li> <!-- LinkedIn -->
+                            <li><a href="https://www.facebook.com/Gharpayy/"><i class="material-icons footer-icons" style="color: #dfdad2;">facebook</i></a></li> <!-- Facebook -->
+                            
+                          
+                          </ul>
+                        </div>
+                       <!-- Include Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <div class="footer-widget-wrapper">
+            <p class="text" style="margin-bottom: 0.5em;">
+                <i class="material-icons " style="vertical-align: middle; font-size: 20px; color: #dfdad2;">place</i> 
+                Bangalore, India
+            </p>
+            <p class="text" style="margin-bottom: 0.5em;">
+                <i class="material-icons" style="vertical-align: middle; font-size: 20px; color: #dfdad2;">email</i> 
+                <a href="mailto:hey@gharpayy.com">hey@gharpayy.com</a>
+            </p>
+            <p class="text" style="margin-bottom: 0.5em;">
+                <i class="material-icons" style="vertical-align: middle; font-size: 20px; color: #dfdad2;">call</i> 
+                <a href="tel:+917988114576">+91 7988114576</a>
+            </p>
         </div>
+        
+                        <div class="footer-widget-wrapper">
+                          <h2 class="title">Quick Links</h2>
+                          <ul class="footer-nav-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="index.html#amenities">Amenities</a></li>
+                            <li><a href="students.html">Students</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="copyright-area">
+                      <div class="container">
+                        <div class="copyright-area-inner">
+                          <div class="copyright-text">
+                            <p class="text">© 2024-25 GharPayy. All Rights Reserved.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                </div>
         
         <!-- footer area end  -->
 

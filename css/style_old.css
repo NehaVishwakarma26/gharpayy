@@ -383,7 +383,6 @@ h6,
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
-    margin-top: 89px;
 	padding: 8em;
 }
 /* Left Side Text Box */
@@ -2397,7 +2396,122 @@ a.btn-scroll b {
   .stat-card:hover {
 	transform: translateY(-6px);
   }
-  
+
+  .gp-final-note span {
+    color: #064789 !important;
+    font-family: 'Larken Black' !important;
+    font-size: 1.2em !important;
+}
+
+  #tenant-reviews-gharpayy {
+	text-align: center !important;
+    padding: 60px 30px !important;
+    width: 100% !important;
+    background-color: #e6e2e252;
+  }
+
+  .tenant-title-container {
+	text-align: center;
+	margin-bottom: 30px;
+  }
+
+  .tenant-title {
+	font-size: 28px;
+	font-weight: bold;
+	color: #222;
+	margin: 0;
+	padding: 0;
+  }
+
+  .tenant-title-underline {
+	width: 80px;
+	height: 4px;
+	background: #ffbf00;
+	margin: 10px auto 0;
+	border-radius: 2px;
+  }
+
+  .tenant-card-scroll {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	gap: 16px;
+	padding-bottom: 10px;
+	scrollbar-width: thin;
+  }
+
+  .tenant-card-scroll::-webkit-scrollbar {
+	height: 6px;
+  }
+
+  .tenant-card-scroll::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 3px;
+  }
+
+  .tenant-review-card {
+	flex: 0 0 300px;
+	background: #F0EAD6 !important;
+	padding: 16px;
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+	scroll-snap-align: start;
+	min-width: 250px;
+  }
+
+  .reviewer-name {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 5px;
+	color: #333;
+  }
+
+  .review-stars {
+	color: #fbbf24;
+	font-size: 16px;
+	margin-bottom: 10px;
+  }
+
+  .review-text {
+	font-size: 14px;
+	color: #444;
+	line-height: 1.4;
+  }
+
+  /* Medium screens */
+  @media (max-width: 768px) {
+	.tenant-review-card {
+	  flex: 0 0 220px;
+	  min-width: 200px;
+	}
+
+	.tenant-title {
+	  font-size: 24px;
+	}
+  }
+
+  /* Small screens */
+  @media (max-width: 480px) {
+	.tenant-review-card {
+	  flex: 0 0 100px;
+	  min-width: 200px;
+	}
+
+	.tenant-title {
+	  font-size: 20px;
+	}
+
+	.reviewer-name,
+	.review-stars,
+	.review-text {
+	  font-size: 10px;
+	}
+
+	.tenant-review-card {
+	  padding: 10px;
+	}
+  }
+
 
   @media (max-width: 768px) {
 	.row.g-4 {
